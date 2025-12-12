@@ -8,7 +8,7 @@ section {
     padding-top: 64px;
 }
 #header {
-    background: url("static/images/backgroundnew.jpg");
+    background: url("../images/backgroundnew.jpg");
     background-size: cover;
     background-position: bottom;
 }
