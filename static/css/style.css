@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    z-index: 100;
+}
+
+.slide-bg {
+    background-image: url("../images/gallery_bce/foto_1.jpg");
+    background-size: cover;
+}
+
+.main-section {
+    min-height: 100vh;
+    padding: 64px 0;
+}
