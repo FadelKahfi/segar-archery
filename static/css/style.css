@@ -8,13 +8,9 @@ section {
     padding-top: 64px;
 }
 #header {
-    background: url("/static/images/backgroundnew.jpg");
+    background: url("static/images/backgroundnew.jpg");
     background-size: cover;
     background-position: bottom;
-}
-.client-list {
-    margin: auto;
-    max-width: 800px;
 }
 /* Floating Sidebar */
 .floating-sidebar {
@@ -29,31 +25,7 @@ section {
     flex-direction: column;
     padding: 10px 5px;
 }
-
-.floating-sidebar a,
-#wajib-login a {
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 60px;
-    margin: 4px 0;
-    font-size: 18px;
-    transition: background 0.2s, color 0.2s;
-    border-radius: 50%;
-}
-
-.floating-sidebar a:hover .material-symbols-rounded,
-#wajib-login a:hover .material-symbols-rounded {
-    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
-}
 /* Maps symbol */
 #maps-symbol {
     font-size: 50px;
-}
-
-.heading-ongkir {
-    background: url("/static/images/delivery.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 512px;
 }
