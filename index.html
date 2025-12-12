@@ -3,9 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bahtera Cahaya Express</title>
-        <!-- Chatbot CSS -->
-        <link rel="stylesheet" href="static/css/chatbot.css" />
+        <title>Segar Archery School</title>
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
         <!-- Local CSS -->
@@ -63,11 +61,11 @@
                     <img
                         src="static/images/logo_transparant.png"
                         class="h-8"
-                        alt="BCE Logo"
+                        alt="Segar Archery Logo"
                     />
                     <span
                         class="self-center text-2xl font-semibold whitespace-nowrap text-white hidden sm:block"
-                        >Bahtera Cahaya Express</span
+                        >Segar Archery School</span
                     >
                 </a>
                 <button
@@ -118,16 +116,9 @@
                         </li>
                         <li>
                             <a
-                                href="/#services"
+                                href="/#kelas"
                                 class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >Services</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="/#contact"
-                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >Contact</a
+                                >Class/Session</a
                             >
                         </li>
                         <!-- Dropdown button -->
@@ -165,16 +156,9 @@
                                 >
                                     <li>
                                         <a
-                                            href="/#legality"
+                                            href="/#coaches"
                                             class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            >Legality</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/#clients"
-                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            >Clients</a
+                                            >Coaches</a
                                         >
                                     </li>
                                     <li>
@@ -191,127 +175,20 @@
                                             >Location</a
                                         >
                                     </li>
+                                    <li>
+                                        <a
+                                            href="/#contact"
+                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            >Contact</a
+                                        >
+                                    </li>
                                 </ul>
-                                <div class="py-1">
-                                    <a
-                                        href="#"
-                                        class="page-link block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                        >Sign in</a
-                                    >
-                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <!-- Floating Sidebar -->
-        <div
-            class="floating-sidebar bg-green-500 dark:bg-green-900 p-2 flex flex-col space-y-2 rounded-r-lg shadow-lg !hidden"
-        >
-            <a
-                href="/customer/profile"
-                class="page-link group relative flex items-center justify-center p-3 rounded-lg hover:bg-green-600 transition"
-            >
-                <span class="material-symbols-rounded text-white">person</span>
-                <span
-                    class="absolute left-full ml-2 px-2 py-1 text-sm text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition"
-                >
-                    Profile
-                </span>
-            </a>
-
-            <a
-                href="/customer/ongkir"
-                class="page-link group relative flex items-center justify-center p-3 rounded-lg hover:bg-green-600 transition"
-            >
-                <span class="material-symbols-rounded text-white"
-                    >payments</span
-                >
-                <span
-                    class="absolute left-full ml-2 px-2 py-1 text-sm text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition"
-                >
-                    Cek Ongkir
-                </span>
-            </a>
-
-            <!-- wajib login -->
-            <div
-                id="wajib-login"
-                class="{% if 'user_id' not in session or session.get('role') != 'customer' %}hidden{% endif %} flex flex-col space-y-2"
-            >
-                <a
-                    href="/customer/pesanan"
-                    class="page-link group relative flex items-center justify-center p-3 rounded-lg hover:bg-green-600 transition"
-                >
-                    <span class="material-symbols-rounded text-white"
-                        >add_shopping_cart</span
-                    >
-                    <span
-                        class="absolute left-full ml-2 px-2 py-1 text-sm text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition"
-                    >
-                        Pesanan
-                    </span>
-                </a>
-
-                <a
-                    href="/customer/profile#bagian-buku-alamat"
-                    class="page-link group relative flex items-center justify-center p-3 rounded-lg hover:bg-green-600 transition"
-                >
-                    <span class="material-symbols-rounded text-white"
-                        >location_on</span
-                    >
-                    <span
-                        class="absolute left-full ml-2 px-2 py-1 text-sm text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition"
-                    >
-                        Alamat
-                    </span>
-                </a>
-
-                <a
-                    href="/customer/riwayat"
-                    class="page-link group relative flex items-center justify-center p-3 rounded-lg hover:bg-green-600 transition"
-                >
-                    <span class="material-symbols-rounded text-white"
-                        >receipt_long</span
-                    >
-                    <span
-                        class="absolute left-full ml-2 px-2 py-1 text-sm text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition"
-                    >
-                        Riwayat
-                    </span>
-                </a>
-
-                <a
-                    href="/customer/kategoribarang"
-                    class="page-link group relative flex items-center justify-center p-3 rounded-lg hover:bg-green-600 transition"
-                >
-                    <span class="material-symbols-rounded text-white"
-                        >category</span
-                    >
-                    <span
-                        class="absolute left-full ml-2 px-2 py-1 text-sm text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition"
-                    >
-                        Kategori
-                    </span>
-                </a>
-
-                <a
-                    href="/customer/logout"
-                    class="page-link group relative flex items-center justify-center p-3 rounded-lg hover:bg-green-600 transition"
-                >
-                    <span class="material-symbols-rounded text-white"
-                        >logout</span
-                    >
-                    <span
-                        class="absolute left-full ml-2 px-2 py-1 text-sm text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition"
-                    >
-                        Logout
-                    </span>
-                </a>
-            </div>
-        </div>
 
         <!-- Header -->
 
@@ -322,18 +199,20 @@
                 <h1
                     class="mb-4 font-extrabold tracking-tight leading-none text-white text-5xl max-w-full md:max-w-1/2"
                 >
-                    We can delivery all your cargo shipments on time
+                    Selamat datang di website Segar Archery School!
                 </h1>
                 <p
                     class="mb-8 text-lg font-normal text-left text-white lg:text-xl"
                 >
-                    Logistic, Courie, Cargo, and Transportations
+                    Give the best, win!!!
                 </p>
+                <br />
                 <div
                     class="flex flex-col space-y-4 sm:flex-row justify-start sm:space-y-0"
                 >
                     <a
-                        href="/customer/register"
+                        href="https://wa.me/6281285626568"
+                        target="_blank"
                         class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:focus:ring-green-900"
                     >
                         <span class="material-symbols-rounded mr-2">
@@ -382,23 +261,15 @@
                     <h1
                         class="mt-4 text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white"
                     >
-                        CV. Bahtera Cahaya Express
+                        Segar Archery School
                     </h1>
                     <p
                         class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 leading-relaxed"
                     >
-                        Perusahaan jasa pengiriman barang (cargo) yang
-                        mengutamakan
-                        <span class="font-semibold text-green-600"
-                            >kecepatan, keamanan, dan profesionalisme</span
-                        >
-                        dengan moda transportasi darat, laut, maupun udara.
-                        Layanan kami fleksibel mulai dari door-to-door,
-                        door-to-port, port-to-door hingga port-to-port. Selain
-                        itu BCE Cargo merupakan agen SMU ( surat muatan udara )
-                        di beberapa airline di antaranya: Lion air grup, Garuda
-                        Indonesia, Rimbun Air, Sriwijaya Air, Air Asia, Tri MG
-                        Asia Airlines, dan Citilink.
+                        Segar Archery School adalah tempat atau klub panahan
+                        yang berlokasi di Jakarta Barat. Didirikan pada tahun
+                        2017 dan menyediakan arena panahan terbuka untuk umum
+                        setiap hari.
                     </p>
                 </div>
 
@@ -418,17 +289,13 @@
                             Siapa Kami?
                         </h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-400">
-                            Kami hadir untuk mendukung kelancaran bisnis baik
-                            perusahaan maupun individu. Dengan dukungan SDM
-                            terlatih & mitra kerja strategis, BCE menjadi
-                            <span class="font-medium text-green-600"
-                                >penyedia layanan cargo terpercaya</span
-                            >
-                            di seluruh Indonesia.
+                            Kami adalah komunitas dan sekolah memanah yang
+                            berdedikasi, menawarkan fasilitas lapangan panahan
+                            setiap hari di Meruya Utara, Jakarta Barat.
                         </p>
                     </div>
 
-                    <!-- Vision Card -->
+                    <!-- Card -->
                     <div class="relative pl-10">
                         <span
                             class="absolute left-0 top-1 w-8 h-8 bg-blue-500 text-white flex items-center justify-center rounded-full shadow-lg"
@@ -440,21 +307,32 @@
                             <h3
                                 class="text-2xl font-extrabold text-gray-800 dark:text-white mb-3"
                             >
-                                Visi Kami
+                                Komitmen Kami
                             </h3>
                             <p
                                 class="text-gray-600 dark:text-gray-400 leading-relaxed"
                             >
-                                Menjadi perusahaan jasa pengiriman cargo yang
+                                Segar Archery School resmi berdiri sebagai badan
+                                hukum pada tahun 2019 dengan pengesahan dari
+                                Menteri Hukum dan HAM Republik Indonesia melalui
                                 <span class="font-semibold text-green-600"
-                                    >profesional & terpercaya</span
+                                    >Surat Keputusan Nomor
+                                    0004564.AH.01.07.</span
                                 >
-                                dalam melayani klien maupun mitra bisnis.
+                                Segar Archery School juga sejak 2022 telah
+                                mendapatkan
+                                <span class="font-semibold text-green-600"
+                                    >SK Keanggotaan PERPANI Jakarta Barat Nomor:
+                                    003/SK/PERPANI-JB/VI/2022.</span
+                                >
+                                Sejak awal berdirinya, Segar Archery School
+                                berkomitmen untuk menjadi wadah pembinaan
+                                panahan yang profesional dan berkelanjutan.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Mission Card -->
+                    <!-- Card
                     <div class="relative pl-10">
                         <span
                             class="absolute left-0 top-1 w-8 h-8 bg-purple-500 text-white flex items-center justify-center rounded-full shadow-lg"
@@ -466,7 +344,7 @@
                             <h3
                                 class="text-2xl font-extrabold text-gray-800 dark:text-white mb-3"
                             >
-                                Misi Kami
+                                ???
                             </h3>
                             <ul
                                 class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400"
@@ -487,42 +365,42 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
 
-        <!-- Services Redesigned -->
+        <!-- Class/Session -->
         <section
-            id="services"
+            id="kelas"
             class="py-20 bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800"
         >
             <div class="text-center mb-16">
                 <h1
                     class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white"
                 >
-                    Layanan
+                    Kelas dan Sesi
                 </h1>
                 <p
                     class="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
                 >
-                    Kami menyediakan layanan pengiriman cepat, aman, dan
-                    terpercaya melalui jalur udara, darat, dan laut untuk
-                    mendukung kebutuhan logistik Anda.
+                    Kami menyediakan beberapa kelas, seperti kelas member dan
+                    akademi. Serta, beberapa sesi, seperti sesi per-visit dan
+                    sesi private.
                 </p>
             </div>
 
             <!-- Cards -->
             <div
-                class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6"
+                class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-6"
             >
-                <!-- Card Udara -->
+                <!-- Card Member -->
                 <div
                     class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 hover:scale-[1.02] duration-500 group"
                 >
                     <img
-                        src="static/images/udara.jpg"
-                        alt="Layanan Udara"
+                        src="static/images/member.jpg"
+                        alt="Kelas Member"
                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-700"
                     />
                     <div
@@ -531,32 +409,31 @@
                         <span
                             class="material-symbols-rounded text-white text-6xl mb-4 animate-bounce"
                         >
-                            flight_takeoff
+                            🏹
                         </span>
                         <h3 class="text-2xl font-bold text-white">
-                            Layanan Udara
+                            Kelas Member
                         </h3>
                         <p class="mt-3 text-sm text-gray-200 leading-relaxed">
-                            Kecepatan dan keamanan maksimal untuk barang
-                            mendesak dan bernilai tinggi. Didukung maskapai
-                            terpercaya.
+                            Jadwal<br />
+                            Sabtu: 07:00 - 11:00<br />
+                            Ahad: 07:00 - 11:00
                         </p>
-                        <a
-                            href="#"
+                        <span
                             class="mt-5 inline-block px-5 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
                         >
-                            Selengkapnya
-                        </a>
+                            Rp500,000/bulan
+                        </span>
                     </div>
                 </div>
 
-                <!-- Card Darat -->
+                <!-- Card Akademi -->
                 <div
                     class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 hover:scale-[1.02] duration-500 group"
                 >
                     <img
-                        src="static/images/darat.jpg"
-                        alt="Layanan Darat"
+                        src="static/images/akademi.jpg"
+                        alt="Kelas Akademi"
                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-700"
                     />
                     <div
@@ -565,31 +442,32 @@
                         <span
                             class="material-symbols-rounded text-white text-6xl mb-4 animate-bounce"
                         >
-                            local_shipping
+                            🏹
                         </span>
                         <h3 class="text-2xl font-bold text-white">
-                            Layanan Darat
+                            Kelas Akademi
                         </h3>
                         <p class="mt-3 text-sm text-gray-200 leading-relaxed">
-                            Layanan pengiriman darat cepat & aman dengan armada
-                            handal dan rute strategis antar kota dan provinsi.
+                            Jadwal<br />
+                            Jum'at: 15:00 - 17:30<br />
+                            Sabtu: 14:00 - 17:30<br />
+                            Ahad: 14:00 - 17:30
                         </p>
-                        <a
-                            href="#"
+                        <span
                             class="mt-5 inline-block px-5 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
                         >
-                            Selengkapnya
-                        </a>
+                            Rp600,000/bulan
+                        </span>
                     </div>
                 </div>
 
-                <!-- Card Laut -->
+                <!-- Card Pervisit -->
                 <div
                     class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 hover:scale-[1.02] duration-500 group"
                 >
                     <img
-                        src="static/images/laut.jpg"
-                        alt="Layanan Laut"
+                        src="static/images/pervisit.jpg"
+                        alt="Sesi Pervisit"
                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-700"
                     />
                     <div
@@ -598,21 +476,252 @@
                         <span
                             class="material-symbols-rounded text-white text-6xl mb-4 animate-bounce"
                         >
-                            directions_boat
+                            🏹
                         </span>
                         <h3 class="text-2xl font-bold text-white">
-                            Layanan Laut
+                            Sesi Per-visit
                         </h3>
                         <p class="mt-3 text-sm text-gray-200 leading-relaxed">
-                            Aman & efisien untuk pengiriman besar dengan
-                            jaringan pelabuhan luas. Kompetitif hingga ke
-                            pelosok nusantara.
+                            Bisa tentukan waktu latihannya dengan coach ya ^^
                         </p>
-                        <a
-                            href="#"
+                        <span
                             class="mt-5 inline-block px-5 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
                         >
-                            Selengkapnya
+                            Rp30,000/20 shoot<br />
+                            Rp100.000/2 jam/orang<br />
+                            Rp65.000/2 jam/orang (Alat Sendiri)
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 hover:scale-[1.02] duration-500 group"
+                >
+                    <img
+                        src="static/images/private.jpg"
+                        alt="Sesi Private"
+                        class="w-full h-72 object-cover group-hover:scale-105 transition duration-700"
+                    />
+                    <div
+                        class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-6"
+                    >
+                        <span
+                            class="material-symbols-rounded text-white text-6xl mb-4 animate-bounce"
+                        >
+                            🏹
+                        </span>
+                        <h3 class="text-2xl font-bold text-white">
+                            Sesi Private
+                        </h3>
+                        <p class="mt-3 text-sm text-gray-200 leading-relaxed">
+                            Bisa tentukan waktu latihannya dengan coach ya ^^
+                        </p>
+                        <span
+                            class="mt-5 inline-block px-5 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
+                        >
+                            Rp250,000/sesi latihan
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coaches -->
+        <section
+            id="coaches"
+            class="py-20 bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800"
+        >
+            <!-- Title -->
+            <div class="text-center mb-14">
+                <h1
+                    class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white"
+                >
+                    Coaches
+                </h1>
+                <p
+                    class="mt-3 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+                >
+                    Kami bangga memiliki coaches terbaik!
+                </p>
+            </div>
+
+            <!-- Marquee -->
+            <div class="relative overflow-hidden py-6">
+                <div id="list-coach" class="flex animate-marquee space-x-16">
+                    <!-- Foto -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section
+            id="gallery"
+            class="py-20 bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800"
+        >
+            <div class="text-center mb-14">
+                <h1
+                    class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white"
+                >
+                    Dokumentasi
+                </h1>
+                <p
+                    class="mt-3 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+                >
+                    Koleksi momen terbaik & dokumentasi di Segar Archery School.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-8">
+                <div class="grid gap-4">
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_1.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_2.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_3.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_4.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_5.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_6.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_7.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_8.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_9.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_10.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_11.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="h-full object-cover max-w-full rounded-lg"
+                            src="static/images/gallery_segar/foto_12.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section
+            id="location"
+            class="py-20 bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800"
+        >
+            <div class="text-center mb-14">
+                <h1
+                    class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white"
+                >
+                    Lokasi
+                </h1>
+                <p
+                    class="mt-3 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+                >
+                    Kunjungi kantor pusat & field office kami untuk pelayanan
+                    langsung dan konsultasi.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-1 gap-10 max-w-6xl mx-auto px-6">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 duration-500"
+                >
+                    <div class="relative">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.520641111625!2d106.7338845!3d-6.194823800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7b869dedbf9%3A0xa0e1674f66820a0!2sSegar%20Archery%20School%20%2F%20Sekolah%20Memanah%20Segar!5e0!3m2!1sid!2sid!4v1765542384853!5m2!1sid!2sid"
+                            class="w-full h-72"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                        >
+                        </iframe>
+                        <span
+                            class="absolute top-4 right-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full shadow"
+                            >Segar Archery School</span
+                        >
+                    </div>
+                    <div class="p-6">
+                        <h2
+                            class="text-xl font-bold text-gray-800 dark:text-white mb-2"
+                        >
+                            Segar Archery School
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Jl. Topas Raya No.77, RT.6/RW.11, Meruya Utara, Kec.
+                            Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota
+                            Jakarta, 11620.
+                        </p>
+                        <a
+                            href="https://maps.app.goo.gl/rGw92RBcE3YZC7yJ6"
+                            target="_blank"
+                            class="inline-flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
+                        >
+                            <span class="material-symbols-rounded">map</span>
+                            <span>Lihat di Maps</span>
                         </a>
                     </div>
                 </div>
@@ -682,7 +791,7 @@
                             <div class="flex space-x-4">
                                 <!-- WhatsApp -->
                                 <a
-                                    href="https://wa.me/6281291244237"
+                                    href="https://wa.me/6281285626568"
                                     target="_blank"
                                     class="flex items-center justify-center px-5 py-3 bg-green-500 text-white rounded-lg shadow-lg hover:bg-green-600 transition space-x-2"
                                 >
@@ -711,7 +820,7 @@
                                 Email
                             </h4>
                             <p class="text-gray-600 dark:text-gray-400">
-                                atepbcecargo@gmail.com
+                                segararcheryschool@gmail.com
                             </p>
                         </div>
 
@@ -728,25 +837,7 @@
                                 Phone
                             </h4>
                             <p class="text-gray-600 dark:text-gray-400">
-                                0812-3456-7890
-                            </p>
-                        </div>
-
-                        <div
-                            class="p-6 rounded-xl shadow bg-white dark:bg-gray-800 hover:shadow-lg transition"
-                        >
-                            <span
-                                class="material-symbols-rounded text-green-600 text-3xl"
-                                >support_agent</span
-                            >
-                            <h4
-                                class="font-semibold text-lg text-gray-800 dark:text-white mt-2"
-                            >
-                                Support
-                            </h4>
-                            <p class="text-gray-600 dark:text-gray-400">
-                                Layanan bantuan 24/7 untuk pertanyaan dan
-                                keluhan pelanggan.
+                                0857-1752-9422 (Coach Riya)
                             </p>
                         </div>
                     </div>
@@ -754,599 +845,6 @@
             </div>
         </section>
 
-        <!-- Legality -->
-        <section
-            id="legality"
-            class="py-20 bg-gradient-to-b from-white to-green-50 dark:from-gray-900 dark:to-gray-800 px-6"
-        >
-            <div class="text-center mb-12">
-                <h1
-                    class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white"
-                >
-                    Legalitas
-                </h1>
-                <p
-                    class="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
-                >
-                    Perjalanan legalitas kami yang menjamin operasional CV
-                    Bahtera Cahaya Express berjalan sah dan terpercaya.
-                </p>
-            </div>
-
-            <!-- Grid Cards -->
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
-            >
-                <!-- Card -->
-                <div
-                    class="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 hover:shadow-xl transition transform hover:-translate-y-2 duration-500"
-                >
-                    <div class="flex items-center space-x-4">
-                        <span
-                            class="material-symbols-rounded text-green-600 text-4xl"
-                            >gavel</span
-                        >
-                        <h3
-                            class="text-xl font-bold text-gray-800 dark:text-white"
-                        >
-                            Keputusan KEMENHUMHAM R.I
-                        </h3>
-                    </div>
-                    <p class="mt-3 text-gray-600 dark:text-gray-400">
-                        No. AHU - 0014736 - AH.01.14. Tahun 2022
-                    </p>
-                </div>
-
-                <!-- Card -->
-                <div
-                    class="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 hover:shadow-xl transition transform hover:-translate-y-2 duration-500"
-                >
-                    <div class="flex items-center space-x-4">
-                        <span
-                            class="material-symbols-rounded text-green-600 text-4xl"
-                            >description</span
-                        >
-                        <h3
-                            class="text-xl font-bold text-gray-800 dark:text-white"
-                        >
-                            Akta Pendirian
-                        </h3>
-                    </div>
-                    <p class="mt-3 text-gray-600 dark:text-gray-400">
-                        No.18, Tanggal 14 Februari 2022 <br />
-                        Notaris Silviyanti, S.H., M.Kn
-                    </p>
-                </div>
-
-                <!-- Card -->
-                <div
-                    class="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 hover:shadow-xl transition transform hover:-translate-y-2 duration-500"
-                >
-                    <div class="flex items-center space-x-4">
-                        <span
-                            class="material-symbols-rounded text-green-600 text-4xl"
-                            >payments</span
-                        >
-                        <h3
-                            class="text-xl font-bold text-gray-800 dark:text-white"
-                        >
-                            Nomor Pokok Wajib Pajak (NPWP)
-                        </h3>
-                    </div>
-                    <p class="mt-3 text-gray-600 dark:text-gray-400">
-                        No. 63.410.875.7 - 402.000
-                    </p>
-                </div>
-
-                <!-- Card -->
-                <div
-                    class="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 hover:shadow-xl transition transform hover:-translate-y-2 duration-500"
-                >
-                    <div class="flex items-center space-x-4">
-                        <span
-                            class="material-symbols-rounded text-green-600 text-4xl"
-                            >business</span
-                        >
-                        <h3
-                            class="text-xl font-bold text-gray-800 dark:text-white"
-                        >
-                            SIUP
-                        </h3>
-                    </div>
-                    <p class="mt-3 text-gray-600 dark:text-gray-400">
-                        NIB. 2102220068549
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Clients -->
-        <section
-            id="clients"
-            class="py-20 bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800"
-        >
-            <!-- Title -->
-            <div class="text-center mb-14">
-                <h1
-                    class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white"
-                >
-                    Klien
-                </h1>
-                <p
-                    class="mt-3 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
-                >
-                    Kami bangga telah dipercaya oleh perusahaan ternama dalam
-                    distribusi kargo.
-                </p>
-            </div>
-
-            <!-- Marquee Clients -->
-            <div class="relative overflow-hidden py-6">
-                <div class="flex animate-marquee space-x-16">
-                    <!-- Client Logo -->
-                    <img
-                        src="static/images/client_bce/ganex.jpg"
-                        alt="Ganex"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/gledex.jpg"
-                        alt="Gledex"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/access.svg"
-                        alt="Access"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/akr.webp"
-                        alt="AKR"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/binakarir.jpg"
-                        alt="Binakarir"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/indomarco.jpg"
-                        alt="Indomarco"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/iskent.png"
-                        alt="Iskent"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/kenko.jpg"
-                        alt="Kenko"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/kerry.png"
-                        alt="Kerry"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/onecare.jpg"
-                        alt="Onecare"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <!-- Looping 2-->
-                    <img
-                        src="static/images/client_bce/ganex.jpg"
-                        alt="Ganex"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/gledex.jpg"
-                        alt="Gledex"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/access.svg"
-                        alt="Access"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/akr.webp"
-                        alt="AKR"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/binakarir.jpg"
-                        alt="Binakarir"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/indomarco.jpg"
-                        alt="Indomarco"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/iskent.png"
-                        alt="Iskent"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/kenko.jpg"
-                        alt="Kenko"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/kerry.png"
-                        alt="Kerry"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/onecare.jpg"
-                        alt="Onecare"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <!-- Looping 3 -->
-                    <img
-                        src="static/images/client_bce/ganex.jpg"
-                        alt="Ganex"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/gledex.jpg"
-                        alt="Gledex"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/access.svg"
-                        alt="Access"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/akr.webp"
-                        alt="AKR"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/binakarir.jpg"
-                        alt="Binakarir"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/indomarco.jpg"
-                        alt="Indomarco"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/iskent.png"
-                        alt="Iskent"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/kenko.jpg"
-                        alt="Kenko"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/kerry.png"
-                        alt="Kerry"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                    <img
-                        src="static/images/client_bce/onecare.jpg"
-                        alt="Onecare"
-                        class="h-20 object-contain transition duration-300"
-                    />
-                </div>
-            </div>
-
-            <!-- Keunggulan -->
-            <div class="max-w-5xl mx-auto text-center mt-20">
-                <h2
-                    class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-10"
-                >
-                    Keuntungan memilih jasa kami:
-                </h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Card 1 -->
-                    <div
-                        class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-                    >
-                        <div class="flex items-start space-x-3">
-                            <span class="text-green-500 text-3xl">🚚</span>
-                            <div class="text-left">
-                                <h3
-                                    class="font-semibold text-gray-800 dark:text-white"
-                                >
-                                    4 Layanan Pengiriman BCE
-                                </h3>
-                                <p
-                                    class="text-gray-600 dark:text-gray-400 text-sm mt-1"
-                                >
-                                    Nikmati kemudahan dengan pilihan layanan
-                                    lengkap: Door to Door, Door to Port, Port to
-                                    Door, dan Port to Port. Semua dirancang
-                                    fleksibel sesuai kebutuhan Anda, dengan
-                                    pengiriman cepat, aman, dan penanganan
-                                    profesional.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div
-                        class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-                    >
-                        <div class="flex items-start space-x-3">
-                            <span class="text-green-500 text-3xl">📦</span>
-                            <div class="text-left">
-                                <h3
-                                    class="font-semibold text-gray-800 dark:text-white"
-                                >
-                                    Layanan Terintegrasi
-                                </h3>
-                                <p
-                                    class="text-gray-600 dark:text-gray-400 text-sm mt-1"
-                                >
-                                    Konsolidasi/dekonsolidasi, pergudangan,
-                                    pengepakan, hingga crating barang bernilai
-                                    tinggi.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery -->
-        <section
-            id="gallery"
-            class="py-20 bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800"
-        >
-            <div class="text-center mb-14">
-                <h1
-                    class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white"
-                >
-                    Dokumentasi
-                </h1>
-                <p
-                    class="mt-3 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
-                >
-                    Koleksi momen terbaik & dokumentasi aktivitas BCE Cargo.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-8">
-                <div class="grid gap-4">
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_1.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_2.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_3.jpg"
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <div class="grid gap-4">
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_4.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_5.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_6.jpg"
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <div class="grid gap-4">
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_7.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_8.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_9.jpg"
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <div class="grid gap-4">
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_10.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/foto_11.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            class="h-full object-cover max-w-full rounded-lg"
-                            src="static/images/gallery_bce/headoffice.jpeg"
-                            alt=""
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Location -->
-        <section
-            id="location"
-            class="py-20 bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800"
-        >
-            <div class="text-center mb-14">
-                <h1
-                    class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white"
-                >
-                    Lokasi
-                </h1>
-                <p
-                    class="mt-3 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
-                >
-                    Kunjungi kantor pusat & field office kami untuk pelayanan
-                    langsung dan konsultasi.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto px-6">
-                <!-- Head Office -->
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 duration-500"
-                >
-                    <div class="relative">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.94474834672914!2d106.5667849010239!3d-6.115086330255197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1727926797082!5m2!1sen!2sid"
-                            class="w-full h-72"
-                            style="border: 0"
-                            allowfullscreen=""
-                            loading="lazy"
-                        >
-                        </iframe>
-                        <span
-                            class="absolute top-4 right-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full shadow"
-                            >Head Office</span
-                        >
-                    </div>
-                    <div class="p-6">
-                        <h2
-                            class="text-xl font-bold text-gray-800 dark:text-white mb-2"
-                        >
-                            Head Office
-                        </h2>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Perum Permata Sepatan Blok B9 No.23, Kec. Sepatan,
-                            Kab. Tangerang, Banten.
-                        </p>
-                        <a
-                            href="https://maps.google.com/?q=Perum+Permata+Sepatan+B9+No.23"
-                            target="_blank"
-                            class="inline-flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
-                        >
-                            <span class="material-symbols-rounded">map</span>
-                            <span>Lihat di Maps</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Field Office -->
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 duration-500"
-                >
-                    <div class="relative">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.93993616881028!2d106.66512066223552!3d-6.125457060059776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a03007b29faa5%3A0xbdbb6901074f6a7f!2sCV.%20BAHTERA%20CAHAYA%20EXPRESS%20(Field%20Office)!5e0!3m2!1sid!2sid!4v1746444162134!5m2!1sid!2sid"
-                            class="w-full h-72"
-                            style="border: 0"
-                            allowfullscreen=""
-                            loading="lazy"
-                        >
-                        </iframe>
-                        <span
-                            class="absolute top-4 right-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full shadow"
-                            >Field Office</span
-                        >
-                    </div>
-                    <div class="p-6">
-                        <h2
-                            class="text-xl font-bold text-gray-800 dark:text-white mb-2"
-                        >
-                            Field Office
-                        </h2>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Ware House Area Regulated Agent PT. Gatrans Soekarno
-                            Hatta Air Port.
-                        </p>
-                        <a
-                            href="https://maps.google.com/?q=CV+Bahtera+Cahaya+Express+Field+Office"
-                            target="_blank"
-                            class="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-                        >
-                            <span class="material-symbols-rounded">map</span>
-                            <span>Lihat di Maps</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Chatbot -->
-        <button class="chatbot-toggler">
-            <span class="material-symbols-rounded">mode_comment</span>
-            <span class="material-symbols-rounded">close</span>
-        </button>
-        <div class="chatbot">
-            <header>
-                <h2>Chatbot</h2>
-                <span class="close-btn material-symbols-rounded">close</span>
-            </header>
-            <ul class="chatbox">
-                <li class="chat incoming">
-                    <img src="static/images/logo.png" alt="Logo" />
-                    <div class="bubble">
-                        <p id="initial-chat"></p>
-                        <div class="chat-options">
-                            <button onclick="fillTemplate('keluhan')">
-                                Keluhan
-                            </button>
-                            <button onclick="fillTemplate('cek_pemesanan')">
-                                Cek Pemesanan
-                            </button>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <div class="chat-input">
-                <textarea
-                    placeholder="Silakan tulis sesuatu..."
-                    spellcheck="false"
-                    required
-                ></textarea>
-                <span id="send-btn" class="material-symbols-rounded">send</span>
-            </div>
-        </div>
         <!-- Footer -->
         <footer class="bg-gradient-to-r from-green-700 to-green-900 text-white">
             <div class="max-w-7xl mx-auto px-6 py-8">
@@ -1355,7 +853,7 @@
                     <img
                         src="static/images/logo_transparant.png"
                         class="h-12 mb-3"
-                        alt="Logo BCE"
+                        alt="Logo Segar Archery"
                     />
                     <h2 class="text-xl font-bold">Bahtera Cahaya Express</h2>
                     <p class="mt-2 text-gray-200 text-sm max-w-md">
@@ -1385,16 +883,16 @@
                             </li>
                             <li>
                                 <a
-                                    href="/#services"
+                                    href="/#kelas"
                                     class="page-link hover:text-yellow-300 transition"
-                                    >Services</a
+                                    >Class/Session</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="/#legality"
+                                    href="/#coaches"
                                     class="page-link hover:text-yellow-300 transition"
-                                    >Legality</a
+                                    >Coaches</a
                                 >
                             </li>
                             <li>
@@ -1409,22 +907,15 @@
 
                     <!-- Contact (Head & Field Office) -->
                     <div>
-                        <h3
+                        <h2
                             class="text-lg font-semibold mb-3 text-center md:text-left"
                         >
-                            Hubungi Kami
-                        </h3>
-                        <p class="text-gray-200 text-sm mb-2">
-                            <span class="font-semibold">Head Office:</span
-                            ><br />
-                            Perum Permata Sepatan Blok B9 No.23,<br />
-                            Kec. Sepatan, Kab. Tangerang, Banten
-                        </p>
-                        <p class="text-gray-200 text-sm">
-                            <span class="font-semibold">Field Office:</span
-                            ><br />
-                            Warehouse Area Regulated Agent PT. Gatrans,<br />
-                            Soekarno Hatta Airport
+                            Kunjungi Kami
+                        </h2>
+                        <p>
+                            Jl. Topas Raya No.77, RT.6/RW.11, Meruya Utara, Kec.
+                            Kembangan, Kota Jakarta Barat,<br />
+                            Daerah Khusus Ibukota Jakarta, 11620.
                         </p>
                     </div>
                 </div>
@@ -1432,19 +923,22 @@
                 <!-- Social Media -->
                 <div class="flex justify-center space-x-4 mt-8">
                     <a
-                        href="#"
+                        href="https://www.tiktok.com/@segararchery"
+                        target="_blank"
                         class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full hover:bg-yellow-300 transition transform hover:scale-110"
                     >
-                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-tiktok"></i>
                     </a>
                     <a
-                        href="#"
+                        href="https://www.instagram.com/segar.archery/"
+                        target="_blank"
                         class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full hover:bg-yellow-300 transition transform hover:scale-110"
                     >
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                     <a
-                        href="#"
+                        href="https://wa.me/6281285626568"
+                        target="_blank"
                         class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full hover:bg-yellow-300 transition transform hover:scale-110"
                     >
                         <i class="fa-brands fa-whatsapp"></i>
@@ -1455,23 +949,42 @@
                 <div
                     class="border-t border-white/20 mt-6 pt-4 text-center text-sm text-gray-200"
                 >
-                    © 2025 <span class="font-semibold">BCE™</span>. All Rights
-                    Reserved.
+                    © 2025
+                    <span class="font-semibold">Segar Archery School™</span>.
+                    All Rights Reserved.
                 </div>
             </div>
         </footer>
-        <!-- Chatbot JS -->
-        <script src="static/js/chatbot.js"></script>
         <!-- Flowbite JS -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
         <!-- SwiperJS Script -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
-            // Initial text
-            let initialChat = document.getElementById("initial-chat");
-            initialChat.innerHTML = `Halo, selamat datang di website BCE Cargo!👋. Jika butuh bantuan bisa langsung tanyakan di sini ya!`;
+            // COACHES
+            const coaches = [
+                "coach1.jpg",
+                "coach2.jpg",
+                "coach3.jpg",
+                "coach4.jpg",
+                "coach5.jpg",
+            ];
 
-            // CLIENT
+            // container tempat hasilnya akan dimasukkan
+            const container = document.getElementById("list-coach");
+
+            for (let i = 0; i < 3; i++) {
+                // ulang 3x → total 15 elemen
+                for (let j = 0; j < coaches.length; j++) {
+                    const img = document.createElement("img");
+                    img.src = `static/images/${coaches[j]}`;
+                    img.alt = coaches[j];
+                    img.className =
+                        "h-156 object-contain transition duration-300";
+                    container.appendChild(img);
+                }
+            }
+
+            // SWIPER
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 5,
                 spaceBetween: 20,
@@ -1493,37 +1006,6 @@
                     640: { slidesPerView: 3 },
                     1024: { slidesPerView: 5 },
                 },
-            });
-
-            // CONTACT US
-            const contactForm = document.getElementById("contact-form");
-
-            contactForm.addEventListener("submit", function (e) {
-                let isValid = true;
-
-                // Name validation
-                const name = document.getElementById("name");
-                const errorName = document.getElementById("error-name");
-                if (name.value.trim() === "" || name.value.length > 100) {
-                    errorName.classList.remove("hidden");
-                    isValid = false;
-                } else {
-                    errorName.classList.add("hidden");
-                }
-
-                // Message validation
-                const message = document.getElementById("message");
-                const errorMessage = document.getElementById("error-message");
-                if (message.value.trim() === "") {
-                    errorMessage.classList.remove("hidden");
-                    isValid = false;
-                } else {
-                    errorMessage.classList.add("hidden");
-                }
-
-                if (!isValid) {
-                    e.preventDefault(); // cegah submit kalau invalid
-                }
             });
         </script>
     </body>
