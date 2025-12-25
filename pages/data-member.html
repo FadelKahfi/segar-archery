@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Segar Archery School</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="static/css/style.css" />
+        <!-- Google icon -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <!-- SwiperJS CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+            integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- CSS Animation -->
+        <style>
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0%);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+            .animate-marquee {
+                display: flex;
+                width: max-content;
+                animation: marquee 25s linear infinite;
+            }
+        </style>
+
+        <!-- Tailwind -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body class="bg-white dark:bg-gray-900">
+        <!-- Navbar -->
+        <nav
+            class="bg-green-500 border-green-200 dark:bg-green-900 dark:border-green-700 sticky w-full top-0 z-100"
+        >
+            <div
+                class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+            >
+                <a
+                    href="/#"
+                    class="flex items-center space-x-3 rtl:space-x-reverse"
+                >
+                    <img
+                        src="/static/images/logo_transparant.png"
+                        class="h-8"
+                        alt="Segar Archery Logo"
+                    />
+                    <span
+                        class="self-center text-2xl font-semibold whitespace-nowrap text-white hidden sm:block"
+                        >Segar Archery School</span
+                    >
+                </a>
+                <button
+                    data-collapse-toggle="navbar-dropdown"
+                    type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-dropdown"
+                    aria-expanded="false"
+                >
+                    <span class="sr-only">Open main menu</span>
+                    <svg
+                        class="w-5 h-5 text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 17 14"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15"
+                        />
+                    </svg>
+                </button>
+                <div
+                    class="hidden w-full md:block md:w-auto"
+                    id="navbar-dropdown"
+                >
+                    <ul
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:border-none md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700 md:dark:border-none"
+                    >
+                        <li>
+                            <a
+                                href="#"
+                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                aria-current="page"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://forms.gle/xzn8dWAqPaP1jZ2g8"
+                                target="_blank"
+                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                aria-current="page"
+                                >Pendaftaran</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#about"
+                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#kelas"
+                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                >Class/Session</a
+                            >
+                        </li>
+                        <!-- Dropdown button -->
+                        <li>
+                            <button
+                                id="dropdownNavbarLink"
+                                data-dropdown-toggle="dropdownNavbar"
+                                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-green-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent cursor-pointer"
+                            >
+                                More
+                                <svg
+                                    class="w-2.5 h-2.5 ms-2.5"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 10 6"
+                                >
+                                    <path
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="m1 1 4 4 4-4"
+                                    />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div
+                                id="dropdownNavbar"
+                                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600"
+                            >
+                                <ul
+                                    class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                                    aria-labelledby="dropdownLargeButton"
+                                >
+                                    <li>
+                                        <a
+                                            href="#coaches"
+                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            >Coaches</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#gallery"
+                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            >Gallery</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#location"
+                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            >Location</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#contact"
+                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            >Contact</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content -->
+        <section class="my-10">
+            <!-- Title -->
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h1
+                        class="mt-4 text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white margin"
+                    >
+                        List Data Athlete Segar Archery School
+                    </h1>
+                </div>
+            </div>
+            <!-- Tombol Search -->
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <form class="max-w-md mx-auto mb-10">
+                    <label
+                        for="default-search"
+                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                        >Search</label
+                    >
+                    <div class="relative">
+                        <div
+                            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                        >
+                            <svg
+                                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                                />
+                            </svg>
+                        </div>
+                        <input
+                            type="search"
+                            id="default-search"
+                            class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Cari Atlet..."
+                            required
+                        />
+                        <button
+                            type="submit"
+                            class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >
+                            Search
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Card Container -->
+            <div
+                class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto"
+                id="athleteContainer"
+            >
+                <!-- Card -->
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Adeeva Lady Wijonarko"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Adeeva Lady Wijonarko
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 26 Mei 2015</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Aisyah Nurfitria"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Aisyah Nurfitria
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 01 Maret 2009</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Aldizar Brataghani Ardhi"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Aldizar Brataghani Ardhi
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 15 Januari 2016</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Althaf Dilla Firmansyah"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Althaf Dilla Firmansyah
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 15 Juli 2013</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Alysha Winola Verena"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Alysha Winola Verena
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Bukittinggi, 01 Januari 2015</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Annisa Mecca Rahmadina"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Annisa Mecca Rahmadina
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 01 Juli 1975</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Athar Danesh Firmansyah"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Athar Danesh Firmansyah
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 30 Desember 2014</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Azzahrah Anggun Nisita"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Azzahrah Anggun Nisita
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Tangerang, 22 Desember 2010</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Bagas Shidqi Al Abadi"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Bagas Shidqi Al Abadi
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 19 Januari 2012</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Dean Dika"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Dean Dika
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 24 Oktober 2003</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Dhysha Latifah Yasmin"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Dhysha Latifah Yasmin
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 16 September 2011</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Duke Albie Kahfi Adam"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Duke Albie Kahfi Adam
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 25 Maret 2014</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Eric Clarent"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Eric Clarent
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Pontianak, 10 November 2001</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Faiq Sadi Baahir"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Faiq Sadi Baahir
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 30 Agustus 2013</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Faiq Zia El Hakam P."
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Faiq Zia El Hakam P.
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Yogyakarta, 20 Oktober 1996</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Hafiah Puspitawati"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Hafiah Puspitawati
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Pontianak, 25 November 1981</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Hanifa Irfiani"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Hanifa Irfiani
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Cirebon, 18 Juli 2009</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Haniya Izzatunnisa"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Haniya Izzatunnisa
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 19 Januari 2012</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Hazel Alvino Azfar"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Hazel Alvino Azfar
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 27 Februari 2012</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Hikmah"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Hikmah
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 17 Juni 1975</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Humam Zada Labib Alyusri"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center text-lg"
+                        >
+                            Humam Zada Labib Alyusri
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 29 Januari 2015</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Ibrahim Zayyan Radhiansyah"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Ibrahim Zayyan Radhiansyah
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 19 Februari 2014</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Isa Abiyasa Djohari"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Isa Abiyasa Djohari
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >New York, 22 September 1973</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Iskandar Zulkarnain"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Iskandar Zulkarnain
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Manokwari, 18 Februari 1985</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Jatun Adhi Susilo"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Jatun Adhi Susilo
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 12 Maret 1983</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Julian"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Julian
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 07 Juli 1990</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Junhao"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Junhao
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Banda Aceh, 12 Oktober 1976</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Keevana Khairana Khataminnisa"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center text-sm px-2"
+                        >
+                            Keevana Khairana Khataminnisa
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 15 Februari 2015</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Khairunnisa Karimah Salim"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Khairunnisa Karimah Salim
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 31 Juli 2013</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Leandra Faiqah Amira"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Leandra Faiqah Amira
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 20 September 2013</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="M. Adskhan Syahmi Aryvi Malalutang"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center text-sm px-2"
+                        >
+                            M. Adskhan Syahmi Aryvi Malalutang
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 06 Maret 2011</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="M. Ilyas Thaha"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            M. Ilyas Thaha
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jember, 21 April 1973</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="M. Omar Arkhan"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            M. Omar Arkhan
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 01 Desember 2012</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Marita Ainun"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Marita Ainun
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 14 Maret 1979</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Milan Ammara Nareswari"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Milan Ammara Nareswari
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >25 Oktober 2011</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Muhammad Afsar Hakim"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Muhammad Afsar Hakim
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 19 September 2011</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Muhammad Akhdan Zaim Qisthy"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Muhammad Akhdan Zaim Qisthy
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 06 Juni 2011</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Muhammad Akhtar Winarta Qisty"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center text-lg"
+                        >
+                            Muhammad Akhtar Winarta Qisty
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 18 Agustus 2012</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Muhammad Harifkynur Iman"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Muhammad Harifkynur Iman
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 11 Oktober 2014</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Muhammad Harizky Ilham"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Muhammad Harizky Ilham
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 27 Mei 2007</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Muhammad Tsaqib Khalaf"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Muhammad Tsaqib Khalaf
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Baubau, 09 Maret 2010</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Muhammad Zachary Triwidjaya"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center text-lg"
+                        >
+                            Muhammad Zachary Triwidjaya
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Tangerang, 25 November 2008</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Muhammad Zudan Argakusuma"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Muhammad Zudan Argakusuma
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 06 Oktober 2011</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Muhammad Zufar Aqil"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Muhammad Zufar Aqil
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 18 Agustus 2010</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Najmi Nayla Rizqya"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Najmi Nayla Rizqya
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 12 April 2012</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Nasya Syakira Asy'syarifi"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Nasya Syakira Asy'syarifi
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Tangerang, 15 Mei 2014</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Nung"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Nung
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Cirebon, 12 Agustus</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Omar Alfatih Malalutang"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Omar Alfatih Malalutang
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 28 Mei 2016</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Omar Kenzo Alghazi"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Omar Kenzo Alghazi
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 25 April 2014</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Pramudya Yusufa Askara"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Pramudya Yusufa Askara
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 21 April 2020</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Rafa Adrian Syarief"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Rafa Adrian Syarief
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Tangerang, 23 Juni 2015</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Raisha Fitria Ramadhani"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Raisha Fitria Ramadhani
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 26 Agustus 2010</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Rayendra Arkananta Jayamanggala"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center text-sm px-2"
+                        >
+                            Rayendra Arkananta Jayamanggala
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Bandung, 11 Juli 2010</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Rizqi Achmad Saputra"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Rizqi Achmad Saputra
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 27 November 2011</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Serafina Rhea Bhatari"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Serafina Rhea Bhatari
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Tangerang, 13 Februari 2024</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Shaluna Izzaty Myesha"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Shaluna Izzaty Myesha
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 23 Januari 2015</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Siti Humairoh"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Siti Humairoh
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 19 Mei 2014</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Tommy Harri Ardana"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Tommy Harri Ardana
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Surabaya, 21 Juni 1981</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Valldifia Andwita Putri"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Valldifia Andwita Putri
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 27 Juni 2009</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Wyanette Aletha Fede Siahaan"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center text-sm px-2"
+                        >
+                            Wyanette Aletha Fede Siahaan
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 27 Maret 2012</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Yazid Firdaus"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Yazid Firdaus
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 17 Juli 2015</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Zahfira Keylanisa Triwidjaya"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center text-lg"
+                        >
+                            Zahfira Keylanisa Triwidjaya
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Tangerang, 20 Mei 2013</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Zhafran Maher Amnan Alyusri"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center text-lg"
+                        >
+                            Zhafran Maher Amnan Alyusri
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 13 September 2018</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src=""
+                            alt="Zuno Athilla Wibawa"
+                        />
+                        <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
+                        >
+                            Zuno Athilla Wibawa
+                        </h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Jakarta, 08 Februari 2012</span
+                        >
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Kategori:
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-green-700 to-green-900 text-white">
+            <div class="max-w-7xl mx-auto px-6 py-8">
+                <!-- Brand -->
+                <div class="flex flex-col items-center text-center">
+                    <img
+                        src="/static/images/logo_transparant.png"
+                        class="h-12 mb-3"
+                        alt="Logo Segar Archery"
+                    />
+                    <h2 class="text-xl font-bold">Segar Archery School</h2>
+                    <p class="mt-2 text-gray-200 text-sm max-w-md">
+                        Give the best, WIN!!!
+                    </p>
+                </div>
+
+                <!-- Links & Contact -->
+                <div
+                    class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left md:max-w-3xl mx-auto"
+                >
+                    <!-- Quick Links -->
+                    <div>
+                        <h3
+                            class="text-lg font-semibold mb-3 text-center md:text-left"
+                        >
+                            Navigation
+                        </h3>
+                        <ul class="space-y-2 text-center md:text-left">
+                            <li>
+                                <a
+                                    href="/#about"
+                                    class="page-link hover:text-yellow-300 transition"
+                                    >About</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/#kelas"
+                                    class="page-link hover:text-yellow-300 transition"
+                                    >Class/Session</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/#coaches"
+                                    class="page-link hover:text-yellow-300 transition"
+                                    >Coaches</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/#contact"
+                                    class="page-link hover:text-yellow-300 transition"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h2
+                            class="text-lg font-semibold mb-3 text-center md:text-left"
+                        >
+                            Kunjungi Kami
+                        </h2>
+                        <p>
+                            Jl. Topas Raya No.77, RT.6/RW.11, Meruya Utara, Kec.
+                            Kembangan, Kota Jakarta Barat,<br />
+                            Daerah Khusus Ibukota Jakarta, 11620.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="flex justify-center space-x-4 mt-8">
+                    <a
+                        href="https://www.tiktok.com/@segararchery"
+                        target="_blank"
+                        class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full hover:bg-yellow-300 transition transform hover:scale-110"
+                    >
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/segar.archery/"
+                        target="_blank"
+                        class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full hover:bg-yellow-300 transition transform hover:scale-110"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a
+                        href="https://wa.me/6281285626568"
+                        target="_blank"
+                        class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full hover:bg-yellow-300 transition transform hover:scale-110"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <!-- Bottom -->
+                <div
+                    class="border-t border-white/20 mt-6 pt-4 text-center text-sm text-gray-200"
+                >
+                    © 2025
+                    <span class="font-semibold">Segar Archery School™</span>.
+                    All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+        <!-- Flowbite JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+        <!-- SwiperJS Script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Ambil elemen berdasarkan ID yang kamu buat di HTML tadi
+                const searchForm = document.querySelector("form");
+                const searchInput = document.getElementById("default-search");
+                const athleteContainer =
+                    document.getElementById("athleteContainer"); // Pastikan container card kamu punya ID ini
+
+                // 1. Fungsi untuk memfilter kartu
+                const filterAthletes = () => {
+                    const filter = searchInput.value.toLowerCase();
+                    const cards = athleteContainer.querySelectorAll(".w-full"); // Mengambil semua card
+
+                    Array.from(cards).forEach((card) => {
+                        const nameElement = card.querySelector("h5");
+                        if (nameElement) {
+                            const nameText =
+                                nameElement.textContent ||
+                                nameElement.innerText;
+
+                            // Cek apakah nama atlet mengandung teks dari input
+                            if (nameText.toLowerCase().indexOf(filter) > -1) {
+                                card.style.display = ""; // Tampilkan
+                            } else {
+                                card.style.display = "none"; // Sembunyikan
+                            }
+                        }
+                    });
+                };
+
+                // 2. Jalankan filter tiap kali mengetik (Real-time)
+                searchInput.addEventListener("input", filterAthletes);
+
+                // 3. Mencegah form refresh halaman saat tombol Search diklik atau Enter ditekan
+                searchForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    filterAthletes(); // Tetap jalankan filter
+                });
+            });
+        </script>
+    </body>
+</html>
