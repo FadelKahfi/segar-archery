@@ -8,7 +8,7 @@
         <link
             rel="icon"
             type="image/x-icon"
-            href="/static/images/favicon.ico"
+            href="/static/images/icon/championship_2026/logo.webp"
         />
         <!-- Local CSS -->
         <!-- <link rel="stylesheet" href="static/css/style.css" /> -->
@@ -37,28 +37,28 @@
             }
         </style>
     </head>
-    <body class="bg-white dark:bg-gray-900">
+    <body class="bg-white">
         <!-- Navbar -->
         <nav class="bg-zinc-950/20 fixed w-full top-0 z-100 duration-150">
             <div class="flex flex-wrap items-center justify-between p-4">
                 <a
-                    href="/#"
+                    href="#"
                     class="flex items-center space-x-3 rtl:space-x-reverse"
                 >
                     <img
-                        src="/static/images/logo_transparant.png"
+                        src="/static/images/icon/championship_2026/logo.webp"
                         class="h-8"
                         alt="Segar Archery Logo"
                     />
                     <span
                         class="self-center text-2xl font-semibold whitespace-nowrap text-white hidden sm:block"
-                        >Segar Archery School</span
+                        >Segar Archery Championship 2026</span
                     >
                 </a>
                 <button
                     data-collapse-toggle="navbar-dropdown"
                     type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     aria-controls="navbar-dropdown"
                     aria-expanded="false"
                 >
@@ -84,116 +84,30 @@
                     id="navbar-dropdown"
                 >
                     <ul
-                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:border-none md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700 md:dark:border-none"
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:border-none md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
                     >
                         <li>
                             <a
-                                href="/#"
-                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                href="#"
+                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0"
                                 aria-current="page"
                                 >Home</a
                             >
                         </li>
                         <li>
                             <a
-                                href="https://forms.gle/xzn8dWAqPaP1jZ2g8"
-                                target="_blank"
-                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                href="#pendaftaran"
+                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0"
                                 aria-current="page"
                                 >Pendaftaran</a
                             >
                         </li>
                         <li>
                             <a
-                                href="/#about"
-                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >About</a
+                                href="#informasi"
+                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0"
+                                >Informasi</a
                             >
-                        </li>
-                        <li>
-                            <a
-                                href="/#kelas"
-                                class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >Class/Session</a
-                            >
-                        </li>
-                        <!-- Dropdown button -->
-                        <li>
-                            <button
-                                id="dropdownNavbarLink"
-                                data-dropdown-toggle="dropdownNavbar"
-                                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-green-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent cursor-pointer"
-                            >
-                                More
-                                <svg
-                                    class="w-2.5 h-2.5 ms-2.5"
-                                    aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 10 6"
-                                >
-                                    <path
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="m1 1 4 4 4-4"
-                                    />
-                                </svg>
-                            </button>
-                            <!-- Dropdown menu -->
-                            <div
-                                id="dropdownNavbar"
-                                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600"
-                            >
-                                <ul
-                                    class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                                    aria-labelledby="dropdownLargeButton"
-                                >
-                                    <li>
-                                        <a
-                                            href="/#coaches"
-                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            >Coaches</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/#gallery"
-                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            >Gallery</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/#location"
-                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            >Location</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/#contact"
-                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            >Contact</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/pages/data-member.html"
-                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            >Data Athlete</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/pages/articles.html"
-                                            class="page-link block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                            >Articles</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
                     </ul>
                 </div>
@@ -209,52 +123,194 @@
         </section>
 
         <!-- main content -->
-        <section class="w-full bg-white dark:bg-gray-900 py-5">
+        <section class="w-full bg-white">
             <!-- Dokumentasi -->
             <div
                 id="dokumentasi"
-                class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5 border-b-2 border-gray-900 dark:border-white"
+                class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5 border-b-2 border-gray-900"
             >
-                <h2
-                    class="uppercase text-center text-3xl dark:text-white font-bold mb-10"
-                >
+                <h2 class="uppercase text-center text-3xl mb-10 font-bold">
                     Dokumentasi
                 </h2>
+                <div class="flex justify-center gap-10">
+                    <a
+                        href=""
+                        type="button"
+                        class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-md px-10 py-5 text-center me-2 mb-2"
+                    >
+                        DOKUMENTASI</a
+                    ><a
+                        href=""
+                        type="button"
+                        class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-md px-10 py-5 text-center me-2 mb-2"
+                    >
+                        E-SERTIFIKAT
+                    </a>
+                </div>
+                <script>
+                    (function (d, s, id) {
+                        var js,
+                            pjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//www.tickcounter.com/static/js/loader.js";
+                        pjs.parentNode.insertBefore(js, pjs);
+                    })(document, "script", "tickcounter-sdk");
+                </script>
+                <a
+                    data-type="countdown"
+                    data-id="9360719"
+                    class="tickcounter"
+                    style="
+                        display: block;
+                        left: 0;
+                        width: 50%;
+                        height: 0;
+                        position: relative;
+                        padding-bottom: 12%;
+                        margin: 0 auto;
+                    "
+                    title="Segar Archery Championship 2026"
+                    href="//www.tickcounter.com/"
+                    >Segar Archery Championship 2026</a
+                >
             </div>
             <!-- Informasi -->
             <div
                 id="informasi"
-                class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5 border-b-2 border-gray-900 dark:border-white"
+                class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5 border-b-2 border-gray-900"
             >
-                <h2
-                    class="uppercase text-center text-3xl dark:text-white font-bold mb-10"
-                >
+                <h2 class="uppercase text-center text-3xl mb-10 font-bold">
                     Informasi
                 </h2>
+                <div
+                    class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto p-5"
+                >
+                    <a
+                        href="https://drive.google.com/file/d/1gerX2hjoRzLikodtUF5E-624TcDMZjeT/view?usp=sharing"
+                        target="_blank"
+                        type="button"
+                        class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-md px-10 py-5 text-center me-2 mb-2"
+                    >
+                        TECHNICAL HANDBOOK</a
+                    ><a
+                        href=""
+                        type="button"
+                        class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-md px-10 py-5 text-center me-2 mb-2"
+                    >
+                        DENAH LAYOUT </a
+                    ><a
+                        href="#lokasi"
+                        type="button"
+                        class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-md px-10 py-5 text-center me-2 mb-2"
+                    >
+                        LOKASI EVENT</a
+                    ><a
+                        href=""
+                        type="button"
+                        class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-md px-10 py-5 text-center me-2 mb-2"
+                    >
+                        IANSEO </a
+                    ><a
+                        href=""
+                        type="button"
+                        class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-md px-10 py-5 text-center me-2 mb-2"
+                    >
+                        NOMOR TARGET - DAY 1</a
+                    ><a
+                        href=""
+                        type="button"
+                        class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-md px-10 py-5 text-center me-2 mb-2"
+                    >
+                        NOMOR TARGET - DAY 2
+                    </a>
+                </div>
             </div>
             <!-- Pendaftaran -->
             <div
                 id="pendaftaran"
-                class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5 border-b-2 border-gray-900 dark:border-white"
+                class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5 border-b-2 border-gray-900"
             >
-                <h2
-                    class="uppercase text-center text-3xl dark:text-white font-bold mb-10"
-                >
+                <h2 class="uppercase text-center text-3xl mb-10 font-bold">
                     Pendaftaran
                 </h2>
+                <div
+                    class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto p-5"
+                >
+                    <div>
+                        <img
+                            class="w-67 block mx-auto -mb-15"
+                            src="/static/images/icon/championship_2026/individu.webp"
+                            alt="Individu"
+                        />
+                        <p class="text-xl text-center font-bold">Individu</p>
+                        <a
+                            class="text-xl text-center font-bold text-green-500 block hover:underline"
+                            href="https://forms.gle/Jgtq8dMYwkhejSZ19"
+                            target="_blank"
+                        >
+                            [OPEN]
+                        </a>
+                    </div>
+                    <div>
+                        <img
+                            class="w-67 block mx-auto -mb-15"
+                            src="/static/images/icon/championship_2026/beregu.webp"
+                            alt="Beregu/Mix"
+                        />
+                        <p class="text-xl text-center font-bold">Beregu/Mix</p>
+                        <a
+                            class="text-xl text-center font-bold text-green-500 block hover:underline"
+                            href="https://forms.gle/5grTRTTxRmwnSnwp8"
+                            target="_blank"
+                        >
+                            [OPEN]
+                        </a>
+                    </div>
+                    <div>
+                        <img
+                            class="w-67 block mx-auto -mb-15"
+                            src="/static/images/icon/championship_2026/official.webp"
+                            alt="Official"
+                        />
+                        <p class="text-xl text-center font-bold">Official</p>
+                        <a
+                            class="text-xl text-center font-bold text-green-500 block hover:underline"
+                            href="https://forms.gle/sngXrcWaSPVVhfef6"
+                            target="_blank"
+                        >
+                            [OPEN]
+                        </a>
+                    </div>
+                </div>
             </div>
             <!-- Gambar -->
             <div
                 class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5"
-            ></div>
+            >
+                <img
+                    class="block mx-auto w-full"
+                    src="/static/images/icon/championship_2026/flyer_2.webp"
+                    alt="Flyer Pendaftaran"
+                />
+                <img
+                    class="block mx-auto"
+                    src="/static/images/icon/championship_2026/flyer_1.webp"
+                    alt="Flyer Detail"
+                />
+                <img
+                    class="block mx-auto"
+                    src="/static/images/icon/championship_2026/flyer_3.webp"
+                    alt="Flyer Kontak"
+                />
+            </div>
             <!-- Lokasi -->
             <div
                 id="lokasi"
-                class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5 border-b-2 border-gray-900 dark:border-white"
+                class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5 border-b-2 border-gray-900"
             >
-                <h2
-                    class="uppercase text-center text-3xl dark:text-white font-bold mb-10"
-                >
+                <h2 class="uppercase text-center text-3xl mb-10 font-bold">
                     Lokasi
                 </h2>
                 <div class="flex gap-5">
@@ -283,13 +339,39 @@
                             referrerpolicy="no-referrer-when-downgrade"
                             class="w-full"
                         ></iframe>
+                        <p class="font-bold text-xl my-10 text-center">
+                            Lapangan Stadion Olahraga Cendrawasih
+                        </p>
+                        <p class="font-bold text-xl my-10 text-center">
+                            No.22, Jl. Rw. Bengkel No.45, RT.5/RW.7, Cengkareng
+                            Bar., Kecamatan Cengkareng, Kota Jakarta Barat,
+                            Daerah Khusus Ibukota Jakarta 11730
+                        </p>
                     </div>
                 </div>
+            </div>
+            <!-- Sponsor -->
+            <div
+                id="sponsor"
+                class="w-full max-w-6xl overflow-hidden mx-auto min-h-80 my-10 py-5 border-b-2 border-gray-900"
+            >
+                <h2 class="uppercase text-center text-3xl mb-10 font-bold">
+                    OPEN SPONSORSHIP!!!
+                </h2>
+                <p class="font-bold text-center">
+                    Bisa hubungi kontak ini:
+                    <a
+                        href="https://wa.me/628129810329"
+                        target="_blank"
+                        class="text-blue-600 hover:underline"
+                        >+62 812-9810-329</a
+                    >
+                </p>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="bg-gradient-to-r from-green-700 to-green-900 text-white">
+        <footer class="bg-gradient-to-r from-blue-700 to-blue-900 text-white">
             <div class="max-w-7xl mx-auto px-6 py-8">
                 <!-- Brand -->
                 <div class="flex flex-col items-center text-center">
@@ -422,7 +504,7 @@
                 if (currentScrollTop > 100 && lastScrollTop <= 100) {
                     navbar.setAttribute(
                         "class",
-                        "bg-green-500 border-green-200 dark:bg-green-900 dark:border-green-700 fixed w-full top-0 z-100 duration-150",
+                        "bg-blue-900 border-blue-200 fixed w-full top-0 z-100 duration-150",
                     );
                 }
 
