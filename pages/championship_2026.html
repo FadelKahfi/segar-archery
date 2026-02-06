@@ -96,17 +96,17 @@
                         </li>
                         <li>
                             <a
-                                href="#pendaftaran"
+                                href="#informasi"
                                 class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0"
-                                aria-current="page"
-                                >Pendaftaran</a
+                                >Informasi</a
                             >
                         </li>
                         <li>
                             <a
-                                href="#informasi"
+                                href="#pendaftaran"
                                 class="page-link block py-2 px-3 text-gray-900 md:text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0"
-                                >Informasi</a
+                                aria-current="page"
+                                >Pendaftaran</a
                             >
                         </li>
                     </ul>
@@ -185,7 +185,7 @@
                     Informasi
                 </h2>
                 <div
-                    class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto p-5"
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto p-5"
                 >
                     <a
                         href="https://drive.google.com/file/d/1EP9HsyggX1-qyzEQ8Wm2_sfv0537gzqq/view?usp=sharing"
@@ -314,22 +314,11 @@
                 <h2 class="uppercase text-center text-3xl mb-10 font-bold">
                     Lokasi
                 </h2>
-                <div class="flex gap-5 flex-wrap">
-                    <!-- List foto -->
-                    <div class="flex flex-col gap-5">
-                        <img
-                            src="/static/images/gallery_segar/foto_1.jpg"
-                            alt=""
-                            class="sm:w-96 w-full"
-                        />
-                        <img
-                            src="/static/images/gallery_segar/foto_2.jpg"
-                            alt=""
-                            class="sm:w-96 w-full"
-                        />
-                    </div>
+                <div class="flex gap-5 flex-col items-center">
                     <!-- G-maps -->
-                    <div class="w-full">
+                    <div
+                        class="max-w-2xl bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                    >
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.911147600406!2d106.7213567!3d-6.1426365999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f801bb082fad%3A0x4e6efd150419fb5f!2sLapangan%20Stadion%20Olah%20Raga%20Cendrawasih!5e0!3m2!1sid!2sid!4v1770130242441!5m2!1sid!2sid"
                             width="600"
@@ -338,16 +327,79 @@
                             allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
-                            class="w-full"
+                            class="w-full rounded-t-lg"
                         ></iframe>
-                        <p class="font-bold text-xl my-10 text-center">
-                            Lapangan Stadion Olahraga Cendrawasih
-                        </p>
-                        <p class="font-bold text-xl my-10 text-center">
-                            No.22, Jl. Rw. Bengkel No.45, RT.5/RW.7, Cengkareng
-                            Bar., Kecamatan Cengkareng, Kota Jakarta Barat,
-                            Daerah Khusus Ibukota Jakarta 11730
-                        </p>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5
+                                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                                >
+                                    Lapangan Stadion Olahraga Cendrawasih
+                                </h5>
+                            </a>
+                            <p
+                                class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                            >
+                                No.22, Jl. Rw. Bengkel No.45, RT.5/RW.7,
+                                Cengkareng Bar., Kecamatan Cengkareng, Kota
+                                Jakarta Barat, Daerah Khusus Ibukota Jakarta
+                                11730
+                            </p>
+                            <a
+                                href="https://maps.app.goo.gl/khPHjM1fUt1ZhDeX8"
+                                target="_blank"
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            >
+                                Cek di sini!
+                                <svg
+                                    class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 14 10"
+                                >
+                                    <path
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- List foto -->
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="/static/images/icon/championship_2026/pic_1.webp"
+                                alt="Picture 1"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="/static/images/icon/championship_2026/pic_2.webp"
+                                alt="Picture 2"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="/static/images/icon/championship_2026/pic_3.webp"
+                                alt="Picture 3"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="/static/images/icon/championship_2026/pic_4.webp"
+                                alt="Picture 4"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -408,16 +460,16 @@
                             </li>
                             <li>
                                 <a
-                                    href="#pendaftaran"
+                                    href="#informasi"
                                     class="page-link hover:text-yellow-300 transition"
-                                    >Pendaftaran</a
+                                    >Informasi</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="#informasi"
+                                    href="#pendaftaran"
                                     class="page-link hover:text-yellow-300 transition"
-                                    >Informasi</a
+                                    >Pendaftaran</a
                                 >
                             </li>
                         </ul>
