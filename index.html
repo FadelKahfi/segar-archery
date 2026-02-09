@@ -49,7 +49,7 @@
     <body class="bg-white dark:bg-gray-900">
         <!-- Navbar -->
         <nav
-            class="bg-green-500 border-green-200 dark:bg-green-900 dark:border-green-700 sticky w-full top-0 z-100"
+            class="bg-green-500/90 border-green-200/90 dark:bg-green-900/90 dark:border-green-700/90 sticky w-full top-0 z-100 backdrop-blur-lg"
         >
             <div
                 class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -215,31 +215,80 @@
 
         <!-- Header -->
         <section class="bg-gray-700 bg-blend-multiply slide-bg" id="header">
-            <div
-                id="default-carousel"
-                class="relative w-full"
-                data-carousel="slide"
-            >
+            <div id="header-slide" class="relative w-full">
                 <!-- Carousel wrapper -->
                 <div class="relative h-screen overflow-hidden rounded-lg">
                     <!-- Item 1 -->
-                    <div
-                        class="hidden duration-1000 ease-in-out"
-                        data-carousel-item
-                        id="slide-1"
-                    >
-                        <img
-                            src="/static/images/icon/championship_2026/flyer_4.webp"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            alt="..."
-                        />
+                    <div class="hidden duration-1000 ease-in-out" id="slide-1">
+                        <div class="flex md:flex-row flex-col w-full h-full">
+                            <!-- 3 logo, logo, aptil -->
+                            <div class="w-full h-full relative">
+                                <img
+                                    src="/static/images/icon/championship_2026/3_logo.webp"
+                                    alt=""
+                                    class="w-72 sm:w-96 block mx-auto"
+                                />
+                                <div
+                                    class="absolute top-1/2 left-0 -translate-y-1/2 w-full p-5"
+                                >
+                                    <img
+                                        src="/static/images/icon/championship_2026/logo.webp"
+                                        alt=""
+                                        class="w-full max-w-[500px] md:max-w-[700px] block mx-auto"
+                                    />
+                                    <img
+                                        src="/static/images/icon/championship_2026/25-26_aptil.webp"
+                                        alt=""
+                                        class="w-full max-w-[500px] md:max-w-[700px] block mx-auto"
+                                    />
+                                </div>
+                            </div>
+                            <!-- For sign-up -->
+                            <div
+                                class="w-full h-full flex items-center justify-center p-5"
+                            >
+                                <div
+                                    class="bg-white max-w-lg md:max-w-xl dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 duration-500 block m-auto"
+                                >
+                                    <img
+                                        src="static/images/icon/championship_2026/flyer_1.webp"
+                                    />
+                                    <div class="p-6">
+                                        <h1
+                                            class="text-lg xl:text-2xl font-bold text-gray-800 dark:text-white mb-2 text-center"
+                                        >
+                                            SIGN UP FOR THE CHAMPIONSHIP RIGHT
+                                            NOW!!!
+                                        </h1>
+                                        <p
+                                            class="text-gray-600 dark:text-gray-400 mb-4 text-center"
+                                        >
+                                            Click on the link below 👇
+                                        </p>
+                                        <div class="flex justify-center w-full">
+                                            <a
+                                                href="/pages/championship_2026.html"
+                                                target="_blank"
+                                                class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition shadow-md"
+                                            >
+                                                <span>Here!</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- Item 2 -->
+<<<<<<< HEAD
                     <!-- <div
                         class="hidden duration-1000 ease-in-out bg-red-500"
                         data-carousel-item
                         id="slide-2"
                     >
+=======
+                    <div class="hidden duration-1000 ease-in-out" id="slide-2">
+>>>>>>> b5f34dbad20da6252682686e419e6af8e99027f0
                         <div
                             class="px-4 mx-auto max-w-screen-xl h-full text-center md:text-left py-24 lg:py-56"
                         >
@@ -298,31 +347,41 @@
                     class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
                 >
                     <button
+                        id="slide-indicator-1"
                         type="button"
                         class="w-3 h-3 rounded-full"
                         aria-current="true"
                         aria-label="Slide 1"
-                        data-carousel-slide-to="0"
                     ></button>
+<<<<<<< HEAD
                     <!-- <button
+=======
+                    <button
+                        id="slide-indicator-2"
+>>>>>>> b5f34dbad20da6252682686e419e6af8e99027f0
                         type="button"
                         class="w-3 h-3 rounded-full"
                         aria-current="false"
                         aria-label="Slide 2"
+<<<<<<< HEAD
                         data-carousel-slide-to="1"
                     ></button> -->
+=======
+                    ></button>
+>>>>>>> b5f34dbad20da6252682686e419e6af8e99027f0
                 </div>
                 <!-- Slider controls -->
                 <button
                     type="button"
-                    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-prev
+                    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none transition duration-300 hover:bg-linear-to-r hover:from-gray-950/50 hover:to-gray-950/0"
+                    id="prev-slide"
+                    onclick="headerSlideCarousel.prev()"
                 >
                     <span
-                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
                     >
                         <svg
-                            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                            class="w-4 h-4 text-white rtl:rotate-180"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -341,14 +400,15 @@
                 </button>
                 <button
                     type="button"
-                    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-next
+                    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none transition duration-300 hover:bg-linear-to-l hover:from-gray-950/50 hover:to-gray-950/0"
+                    id="nex-slide"
+                    onclick="headerSlideCarousel.next()"
                 >
                     <span
-                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
                     >
                         <svg
-                            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                            class="w-4 h-4 text-white rtl:rotate-180"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -1574,29 +1634,60 @@
                 }
             }
 
-            // SWIPER
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 5,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
+            // Slide carousel
+            // Header element
+            const headerSlideElm = document.getElementById("header-slide");
+
+            // Slide items
+            const slideItem = [
+                {
+                    position: 0,
+                    el: document.getElementById("slide-1"),
                 },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+                {
+                    position: 1,
+                    el: document.getElementById("slide-2"),
                 },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+            ];
+
+            // Option for slide carousel
+            const slideOptions = {
+                defaultPosition: 0,
+                interval: 10000,
+
+                indicators: {
+                    activeClasses: "bg-white dark:bg-gray-800",
+                    inactiveClasses:
+                        "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
+                    items: [
+                        {
+                            position: 0,
+                            el: document.getElementById("slide-indicator-1"),
+                        },
+                        {
+                            position: 1,
+                            el: document.getElementById("slide-indicator-2"),
+                        },
+                    ],
                 },
-                breakpoints: {
-                    320: { slidesPerView: 2 },
-                    640: { slidesPerView: 3 },
-                    1024: { slidesPerView: 5 },
-                },
-            });
+            };
+
+            // instance options object
+            const slideInstanceOptions = {
+                id: "header-slide",
+                override: true,
+            };
+
+            // Init Header Slide Carousel
+            const headerSlideCarousel = new Carousel(
+                headerSlideElm,
+                slideItem,
+                slideOptions,
+                slideInstanceOptions,
+            );
+
+            // Start the carousel cycle
+            headerSlideCarousel.cycle();
         </script>
     </body>
 </html>
