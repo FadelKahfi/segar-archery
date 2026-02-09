@@ -215,19 +215,11 @@
 
         <!-- Header -->
         <section class="bg-gray-700 bg-blend-multiply slide-bg" id="header">
-            <div
-                id="default-carousel"
-                class="relative w-full"
-                data-carousel="slide"
-            >
+            <div id="header-slide" class="relative w-full">
                 <!-- Carousel wrapper -->
                 <div class="relative h-screen overflow-hidden rounded-lg">
                     <!-- Item 1 -->
-                    <div
-                        class="hidden duration-1000 ease-in-out"
-                        data-carousel-item
-                        id="slide-1"
-                    >
+                    <div class="hidden duration-1000 ease-in-out" id="slide-1">
                         <div class="flex md:flex-row flex-col w-full h-full">
                             <!-- 3 logo, logo, aptil -->
                             <div class="w-full h-full relative">
@@ -288,11 +280,7 @@
                         </div>
                     </div>
                     <!-- Item 2 -->
-                    <div
-                        class="hidden duration-1000 ease-in-out"
-                        data-carousel-item
-                        id="slide-2"
-                    >
+                    <div class="hidden duration-1000 ease-in-out" id="slide-2">
                         <div
                             class="px-4 mx-auto max-w-screen-xl h-full text-center md:text-left py-24 lg:py-56"
                         >
@@ -351,25 +339,26 @@
                     class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
                 >
                     <button
+                        id="slide-indicator-1"
                         type="button"
                         class="w-3 h-3 rounded-full"
                         aria-current="true"
                         aria-label="Slide 1"
-                        data-carousel-slide-to="0"
                     ></button>
                     <button
+                        id="slide-indicator-2"
                         type="button"
                         class="w-3 h-3 rounded-full"
                         aria-current="false"
                         aria-label="Slide 2"
-                        data-carousel-slide-to="1"
                     ></button>
                 </div>
                 <!-- Slider controls -->
                 <button
                     type="button"
                     class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none transition duration-300 hover:bg-linear-to-r hover:from-gray-950/50 hover:to-gray-950/0"
-                    data-carousel-prev
+                    id="prev-slide"
+                    onclick="headerSlideCarousel.prev()"
                 >
                     <span
                         class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
@@ -395,7 +384,8 @@
                 <button
                     type="button"
                     class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none transition duration-300 hover:bg-linear-to-l hover:from-gray-950/50 hover:to-gray-950/0"
-                    data-carousel-next
+                    id="nex-slide"
+                    onclick="headerSlideCarousel.next()"
                 >
                     <span
                         class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
@@ -1627,29 +1617,60 @@
                 }
             }
 
-            // SWIPER
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 5,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
+            // Slide carousel
+            // Header element
+            const headerSlideElm = document.getElementById("header-slide");
+
+            // Slide items
+            const slideItem = [
+                {
+                    position: 0,
+                    el: document.getElementById("slide-1"),
                 },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+                {
+                    position: 1,
+                    el: document.getElementById("slide-2"),
                 },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+            ];
+
+            // Option for slide carousel
+            const slideOptions = {
+                defaultPosition: 0,
+                interval: 10000,
+
+                indicators: {
+                    activeClasses: "bg-white dark:bg-gray-800",
+                    inactiveClasses:
+                        "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
+                    items: [
+                        {
+                            position: 0,
+                            el: document.getElementById("slide-indicator-1"),
+                        },
+                        {
+                            position: 1,
+                            el: document.getElementById("slide-indicator-2"),
+                        },
+                    ],
                 },
-                breakpoints: {
-                    320: { slidesPerView: 2 },
-                    640: { slidesPerView: 3 },
-                    1024: { slidesPerView: 5 },
-                },
-            });
+            };
+
+            // instance options object
+            const slideInstanceOptions = {
+                id: "header-slide",
+                override: true,
+            };
+
+            // Init Header Slide Carousel
+            const headerSlideCarousel = new Carousel(
+                headerSlideElm,
+                slideItem,
+                slideOptions,
+                slideInstanceOptions,
+            );
+
+            // Start the carousel cycle
+            headerSlideCarousel.cycle();
         </script>
     </body>
 </html>
