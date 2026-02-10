@@ -1,0 +1,170 @@
+[
+    {
+        "slug": "slug-digunakan-untuk-link-artikel",
+        "title": "Seusai namanya, title untuk judul artikel",
+        "published_at": "12/12/2012",
+        "cover_image": "/gambar/untuk/cover/artikel/bukan/konten/artikel.webp",
+        "content": [
+            {
+                "type": "heading",
+                "level": 2,
+                "text": "Ini untuk teks heading. Pastikan selalu atur type nya ke heading! Untuk level fungsinya sebagai angka pada tag h contoh: h1, h2, h3."
+            },
+            {
+                "type": "paragraph",
+                "text": [
+                    {
+                        "value": "Ini untuk paragraf, sama seperti heading, wajib isi type nya dengan paragraph. Kali ini text punya 4 atribut. value, bold, italic, dan underline. value untuk isi teks, dan sisanya untuk teks tebal, miring dan garis bawah. Atur ke true untuk menerapkannya.",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": [
+                    {
+                        "value": "Paragraf bisa dibuat sebanyak yang kamu mau. Dan jika kamu mau ",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "tulisan ini tebal, ",
+                        "bold": true,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "ini miring, ",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "dan ini underline, ",
+                        "bold": false,
+                        "italic": false,
+                        "underline": true
+                    },
+                    {
+                        "value": "atau semuanya di terapkan, ",
+                        "bold": true,
+                        "italic": true,
+                        "underline": true
+                    },
+                    {
+                        "value": "Cukup duplikat aja seperti contoh ini, maka teks akan tetap di satu paragraf namun dengan style teks yang berbeda-beda.",
+                        "bold": true,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "src": "/static/images/articles/article_1.jpg",
+                "alt": "mau masukin gambar di artikel? atur type ke image, lalu atur src dan alt seperti biasa"
+            },
+            {
+                "type": "list",
+                "style": "ordered",
+                "items": [
+                    {
+                        "type": "text",
+                        "text": [
+                            {
+                                "value": "Kalo mau buat list, atur type nya menjadi list.",
+                                "bold": false,
+                                "italic": false,
+                                "underline": false
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": [
+                            {
+                                "value": "Lalu style nya (ordered/unordered).",
+                                "bold": false,
+                                "italic": false,
+                                "underline": false
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": [
+                            {
+                                "value": "Lalu isi items untuk jumlah list nya",
+                                "bold": false,
+                                "italic": false,
+                                "underline": false
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": [
+                            {
+                                "value": "Kamu juga bisa buat teks nya tebal ",
+                                "bold": false,
+                                "italic": false,
+                                "underline": false
+                            },
+                            {
+                                "value": "Caranya sama seperti sebelumnya di bagian paragraf.",
+                                "bold": false,
+                                "italic": false,
+                                "underline": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "sources": [
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "Mau masukin referensi? tinggal buat 'sources' tapi pastikan diluar 'content'! ",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "Untuk styling nya sama seperti pada paragraf dan list",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "Biasanya kutipan ada 3 bagian, pertama judul dan penulisnya. ",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "Kedua, buku/jurnal nya, biasanya tulisannya miring. ",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "Ketiga, nomornya",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            }
+        ]
+    }
+]
