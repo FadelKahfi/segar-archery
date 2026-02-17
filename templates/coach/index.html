@@ -25,7 +25,13 @@
                     Coach Login
                 </h1>
 
-                <form id="form-login" class="space-y-5">
+                <form
+                    action=""
+                    id="coach-login"
+                    class="space-y-5"
+                    name="coach-login"
+                    method="POST"
+                >
                     <!-- Username Field -->
                     <div>
                         <label
@@ -71,18 +77,13 @@
             </div>
         </div>
         <script>
-            let formLogin = document.getElementById("form-login");
-            formLogin.addEventListener("submit", function (event) {
-                event.preventDefault();
-                const formdata = new FormData(formLogin);
-                for (let value of formdata.values()) {
-                    console.log(value);
-                }
+            let formLogin = document.getElementById("coach-login");
+
+            function coachLogin() {
+                let formdata = new FormData(formLogin);
+
                 fetch("/api/coach/login", {
                     method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
                     body: formdata,
                 })
                     .then(async (response) => {
@@ -100,6 +101,11 @@
                         alert(error);
                         console.error(error);
                     });
+            }
+
+            formLogin.addEventListener("submit", (event) => {
+                event.preventDefault();
+                coachLogin();
             });
         </script>
     </body>
