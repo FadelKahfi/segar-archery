@@ -404,7 +404,7 @@
                 .then(async (response) => {
                     const data = await response.json();
                     if (!response.ok) {
-                        throw new Error("Failed fetch 'data member'");
+                        throw new Error("Failed to fetch 'data-member.json'");
                     }
                     return data;
                 })

@@ -218,139 +218,281 @@
         </nav>
 
         <!-- Content -->
-        <section class="my-10">
+        <section
+            class="my-10 w-full max-w-screen-md overflow-hidden h-auto p-5 block mx-auto"
+        >
             <!-- Title -->
             <div class="max-w-6xl mx-auto px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h1
-                        class="mt-4 text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white margin"
+                    <!-- Article Title -->
+                    <div
+                        class="flex flex-wrap justify-center gap-3 mt-4"
+                        id="article-title"
                     >
-                        Our Articles
-                    </h1>
-                </div>
-            </div>
-            <!-- Card Container -->
-            <div
-                class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 max-w-7xl mx-auto"
-                id="articleContainer"
-            >
-                <!-- Skeleton loading -->
-                <div class="w-full max-w-xs">
-                    <div class="flex flex-col items-center pb-10">
                         <div
-                            class="w-full h-40 mb-3 bg-gray-200 rounded dark:bg-gray-700 animate-pulse"
+                            class="h-10 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
                         ></div>
-                        <div class="mb-1 flex flex-wrap justify-center gap-2">
+                        <div
+                            class="h-10 bg-gray-200 rounded w-20 dark:bg-gray-700 animate-pulse"
+                        ></div>
+                        <div
+                            class="h-10 bg-gray-200 rounded w-40 dark:bg-gray-700 animate-pulse"
+                        ></div>
+                        <div
+                            class="h-10 bg-gray-200 rounded w-96 dark:bg-gray-700 animate-pulse"
+                        ></div>
+
+                        <!--  -->
+                        <h1
+                            class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white margin"
+                        ></h1>
+                    </div>
+
+                    <!-- Article image -->
+                    <div
+                        class="w-full h-auto my-5 rounded-xl overflow-hidden"
+                        id="article-image"
+                    >
+                        <div
+                            class="h-96 bg-gray-200 rounded w-full dark:bg-gray-700 animate-pulse"
+                        ></div>
+                    </div>
+
+                    <!-- Article published date -->
+                    <div id="article-published">
+                        <div
+                            class="h-5 bg-gray-200 rounded w-32 dark:bg-gray-700 animate-pulse"
+                        ></div>
+                    </div>
+
+                    <!-- Article content -->
+                    <div
+                        id="article-content"
+                        class="text-2xl text-justify my-5 dark:text-sky-100 text-emerald-700 flex flex-col gap-5 border-b border-gray-100 dark:border-gray-700 pb-5"
+                    >
+                        <!-- Skeleton loading -->
+                        <div class="flex flex-wrap gap-3">
                             <div
-                                class="h-4 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
+                                class="h-6 bg-gray-200 rounded w-20 dark:bg-gray-700 animate-pulse"
                             ></div>
                             <div
-                                class="h-4 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
+                                class="h-6 bg-gray-200 rounded w-40 dark:bg-gray-700 animate-pulse"
                             ></div>
                             <div
-                                class="h-4 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
+                                class="h-6 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
                             ></div>
                             <div
-                                class="h-4 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
+                                class="h-6 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
                             ></div>
                             <div
-                                class="h-4 bg-gray-200 rounded w-36 dark:bg-gray-700 animate-pulse"
+                                class="h-6 bg-gray-200 rounded w-72 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-56 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-32 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-64 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                        </div>
+                        <div
+                            class="h-8 bg-gray-200 rounded w-64 dark:bg-gray-700 animate-pulse"
+                        ></div>
+                        <div class="flex flex-wrap gap-3">
+                            <div
+                                class="h-6 bg-gray-200 rounded w-20 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-40 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-72 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-56 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-32 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-64 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                        </div>
+                        <div
+                            class="h-8 bg-gray-200 rounded w-64 dark:bg-gray-700 animate-pulse"
+                        ></div>
+                        <div class="flex flex-wrap gap-3">
+                            <div
+                                class="h-6 bg-gray-200 rounded w-20 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-40 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-72 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-56 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-32 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
+                            ></div>
+                            <div
+                                class="h-6 bg-gray-200 rounded w-64 dark:bg-gray-700 animate-pulse"
                             ></div>
                         </div>
                     </div>
-                </div>
-                <div class="w-full max-w-xs">
-                    <div class="flex flex-col items-center pb-10">
-                        <div
-                            class="w-full h-40 mb-3 bg-gray-200 rounded dark:bg-gray-700 animate-pulse"
-                        ></div>
-                        <div class="mb-1 flex flex-wrap justify-center gap-2">
+
+                    <!-- Article sources -->
+                    <div
+                        class="text-2xl text-justify my-5 dark:text-sky-100 text-emerald-700 flex flex-col gap-5"
+                    >
+                        <!-- source title -->
+                        <div id="source-title">
                             <div
-                                class="h-4 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-36 dark:bg-gray-700 animate-pulse"
+                                class="h-8 bg-gray-200 rounded w-64 dark:bg-gray-700 animate-pulse"
                             ></div>
                         </div>
-                    </div>
-                </div>
-                <div class="w-full max-w-xs">
-                    <div class="flex flex-col items-center pb-10">
-                        <div
-                            class="w-full h-40 mb-3 bg-gray-200 rounded dark:bg-gray-700 animate-pulse"
-                        ></div>
-                        <div class="mb-1 flex flex-wrap justify-center gap-2">
-                            <div
-                                class="h-4 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-36 dark:bg-gray-700 animate-pulse"
-                            ></div>
+
+                        <!-- source list -->
+                        <div class="space-y-6" id="source-list">
+                            <div class="flex flex-wrap gap-3">
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-20 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-40 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-72 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-56 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-32 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-64 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-20 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-40 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-72 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-56 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-32 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-64 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-20 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-40 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-72 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-56 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-32 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                                <div
+                                    class="h-6 bg-gray-200 rounded w-64 dark:bg-gray-700 animate-pulse"
+                                ></div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="w-full max-w-xs">
-                    <div class="flex flex-col items-center pb-10">
+
+                        <!-- Source format -->
                         <div
-                            class="w-full h-40 mb-3 bg-gray-200 rounded dark:bg-gray-700 animate-pulse"
-                        ></div>
-                        <div class="mb-1 flex flex-wrap justify-center gap-2">
+                            class="pt-6 border-t border-gray-100 dark:border-gray-700 text-sm text-gray-400 text-center italic"
+                            id="source-format"
+                        >
                             <div
-                                class="h-4 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-36 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full max-w-xs">
-                    <div class="flex flex-col items-center pb-10">
-                        <div
-                            class="w-full h-40 mb-3 bg-gray-200 rounded dark:bg-gray-700 animate-pulse"
-                        ></div>
-                        <div class="mb-1 flex flex-wrap justify-center gap-2">
-                            <div
-                                class="h-4 bg-gray-200 rounded w-30 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-60 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-24 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-44 dark:bg-gray-700 animate-pulse"
-                            ></div>
-                            <div
-                                class="h-4 bg-gray-200 rounded w-36 dark:bg-gray-700 animate-pulse"
+                                class="h-5 bg-gray-200 rounded w-96 dark:bg-gray-700 animate-pulse block mx-auto"
                             ></div>
                         </div>
                     </div>
@@ -470,12 +612,134 @@
         <!-- Flowbite JS -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
         <script>
-            const uri = "/static/js/articles.json";
-            const articleContainer =
-                document.getElementById("articleContainer");
+            // Get url param
+            const uri = "/static/js/articles-example.json";
+            const urlParams = new URLSearchParams(window.location.search);
+            const article = "slug-digunakan-untuk-link-artikel";
 
-            // Load all article
-            function loadArticles() {
+            // init content
+            const articleTitle = document.getElementById("article-title");
+            const articleImage = document.getElementById("article-image");
+            const articlePublished =
+                document.getElementById("article-published");
+            const articleContent = document.getElementById("article-content");
+            const sourceTitle = document.getElementById("source-title");
+            const sourceList = document.getElementById("source-list");
+            const sourceFormat = document.getElementById("source-format");
+
+            // Article content process
+            // Text
+            function textProcessor(data) {
+                const formatMap = {
+                    bold: ["<b>", "</b>"],
+                    italic: ["<i>", "</i>"],
+                    underline: ["<u>", "</u>"],
+                };
+
+                const styledText = Object.keys(formatMap).reduce((acc, key) => {
+                    return data[key]
+                        ? `${formatMap[key][0]}${acc}${formatMap[key][1]}`
+                        : acc;
+                }, data.value);
+
+                return styledText;
+            }
+
+            // Paragraph
+            function paragraphProcessor(data) {
+                let paragraph = "<p>";
+
+                data.text.forEach((text) => {
+                    paragraph += textProcessor(text);
+                });
+
+                paragraph += "</p>";
+                return paragraph;
+            }
+
+            // Image
+            function imageProcessor(data) {
+                return `<img src="${data.src}" alt="${data.alt}" class="w-full h-auto my-1 rounded-xl">`;
+            }
+
+            // heading
+            function headingProcessor(data) {
+                return `<h${data.level} class="font-bold">${data.text}</h${data.level}>`;
+            }
+
+            // list
+            function listProcessor(data) {
+                let list = "";
+
+                content =
+                    data.style === "ordered"
+                        ? `<ol class="list-outside list-decimal ml-6">`
+                        : `<ul class="list-outside list-disc ml-6">`;
+
+                data.items.forEach((item) => {
+                    list += "<li>";
+                    item.text.forEach((text) => {
+                        list += textProcessor(text);
+                    });
+                    list += "</li>";
+                });
+
+                content += list;
+                content += data.style === "ordered" ? "</ol>" : "</ul>";
+                console.log(content);
+
+                return content;
+            }
+
+            // Content loader
+            function loadArticleData(contentData) {
+                let content = "";
+
+                contentData.forEach((data) => {
+                    switch (data.type) {
+                        case "paragraph":
+                            content += paragraphProcessor(data);
+                            break;
+
+                        case "image":
+                            content += imageProcessor(data);
+                            break;
+
+                        case "heading":
+                            content += headingProcessor(data);
+                            break;
+
+                        case "list":
+                            content += listProcessor(data);
+
+                            break;
+
+                        default:
+                            break;
+                    }
+                });
+                return content;
+            }
+
+            // Reference loader
+            function loadArticleReference(referenceData) {
+                let content = "";
+
+                referenceData.forEach((data) => {
+                    content += `<p class="pl-8 -indent-8 text-lg leading-relaxed">`;
+
+                    data.text.forEach((text) => {
+                        content += textProcessor(text);
+                    });
+
+                    content += "</p>";
+                });
+
+                return content;
+            }
+
+            // Load article
+            function loadArticle() {
                 fetch(uri, {
                     method: "GET",
                     headers: { "Content-Type": "application/json" },
@@ -485,37 +749,46 @@
                         if (!response.ok) {
                             throw new Error("Failed to fetch 'articles.json'");
                         }
+
                         return data;
                     })
                     .then((data) => {
-                        let article = "";
-                        data.forEach((data) => {
-                            article += `
-                                <a href="title_article.html?article=${data.slug}" class="w-full max-w-xs">
-                                    <div class="flex flex-col items-center pb-10">
-                                        <img
-                                            class="w-full h-40 mb-3 shadow-lg object-cover"
-                                            src="${data.cover_image}"
-                                            alt="${data.title}"
-                                        />
-                                        <h5
-                                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center"
-                                        >
-                                            ${data.title}
-                                        </h5>
-                                    </div>
-                                </a>
-                            `;
-                        });
+                        articleData = data.find(
+                            (articleSlug) => articleSlug.slug === article,
+                        );
+                        // Load the data
+                        // Title
+                        articleTitle.innerHTML = `<h1 class="mt-4 text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white margin">${articleData.title}</h1>`;
 
-                        articleContainer.innerHTML = article;
+                        // Image Cover
+                        articleImage.innerHTML = `<img src="${articleData.cover_image}" alt="${articleData.title}" class="w-full h-auto">`;
+
+                        // Published
+                        articlePublished.innerHTML = `<p class="text-left dark:text-sky-100 text-sky-500">${articleData.published_at}</p>`;
+
+                        // Article content
+                        articleContent.innerHTML = loadArticleData(
+                            articleData.content,
+                        );
+
+                        // Source title
+                        sourceTitle.innerHTML = `<h2 class="font-bold">Sumber</h2>`;
+
+                        // Source list
+                        sourceList.innerHTML = loadArticleReference(
+                            articleData.sources,
+                        );
+
+                        // Source format
+                        sourceFormat.textContent =
+                            "Format Referensi: American Psychological Association (APA) 7th Edition";
                     })
                     .catch((error) => {
                         console.error(error);
                     });
             }
 
-            loadArticles();
+            loadArticle();
         </script>
     </body>
 </html>
