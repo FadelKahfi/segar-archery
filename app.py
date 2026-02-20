@@ -74,8 +74,9 @@ def respon_api(status, code, message, data, pagination):
 def coachLogin():
     try:
         if request.method == "POST":
-            username = str(request.form["username"])
-            password = str(request.form["password"])
+            data = request.json
+            username = str(data.get("username"))
+            password = data.get("password")
 
             # Check Account
             account = userData.find_one({"username": username})

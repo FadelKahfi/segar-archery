@@ -81,10 +81,14 @@
 
             function coachLogin() {
                 let formdata = new FormData(formLogin);
+                formdata = Object.fromEntries(formdata.entries());
 
                 fetch("/api/coach/login", {
                     method: "POST",
-                    body: formdata,
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formdata),
                 })
                     .then(async (response) => {
                         const data = await response.json();
