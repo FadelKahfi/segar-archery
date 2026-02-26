@@ -14,4 +14,14 @@ pages_route = Blueprint("pages", __name__)
 # Route
 @pages_route.route("/coach")
 def coach():
-    return render_template("coach/index.html")
+    if "user_id" in session:
+        return redirect (url_for("pages.dashboard"))
+    else:
+        return render_template("coach/index.html")
+
+@pages_route.route("/coach/dashboard")
+def dashboard():
+    if "user_id" not in session:
+        return redirect (url_for("pages.coach"))
+    else:
+        return render_template("coach/dashboard.html", nama_coach = session["name"], username_coach = session["username"])

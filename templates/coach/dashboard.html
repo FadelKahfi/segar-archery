@@ -1,0 +1,1359 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Absensi Panahan</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            :root {
+                --gold: #c9a84c;
+                --dark: #0f1117;
+                --card-bg: #181c27;
+                --border: #2a2f40;
+            }
+            body {
+                font-family: "DM Sans", sans-serif;
+                background-color: var(--dark);
+                color: #e2e8f0;
+            }
+            .display-font {
+                font-family: "Bebas Neue", cursive;
+            }
+            .sidebar {
+                background: #13151f;
+                border-right: 1px solid var(--border);
+            }
+            .nav-item:hover,
+            .nav-item.active {
+                background: linear-gradient(
+                    90deg,
+                    rgba(201, 168, 76, 0.15) 0%,
+                    transparent 100%
+                );
+                border-left: 3px solid var(--gold);
+                color: var(--gold);
+            }
+            .nav-item {
+                border-left: 3px solid transparent;
+                transition: all 0.2s;
+            }
+            .stat-card {
+                background: var(--card-bg);
+                border: 1px solid var(--border);
+                transition:
+                    transform 0.2s,
+                    border-color 0.2s;
+            }
+            .stat-card:hover {
+                transform: translateY(-3px);
+                border-color: var(--gold);
+            }
+            .day-tab input[type="radio"] {
+                display: none;
+            }
+            .day-tab label {
+                cursor: pointer;
+                padding: 0.5rem 1.5rem;
+                border-radius: 6px;
+                transition: all 0.2s;
+                color: #94a3b8;
+                font-weight: 500;
+                border: 1px solid transparent;
+            }
+            .day-tab input[type="radio"]:checked + label {
+                background: var(--gold);
+                color: #0f1117;
+                font-weight: 700;
+            }
+            .table-row:nth-child(even) {
+                background: rgba(255, 255, 255, 0.02);
+            }
+            .table-row:hover {
+                background: rgba(201, 168, 76, 0.07);
+            }
+            .badge-hadir {
+                background: rgba(34, 197, 94, 0.15);
+                color: #4ade80;
+                border: 1px solid rgba(34, 197, 94, 0.3);
+            }
+            .badge-izin {
+                background: rgba(234, 179, 8, 0.15);
+                color: #facc15;
+                border: 1px solid rgba(234, 179, 8, 0.3);
+            }
+            .badge-alpha {
+                background: rgba(239, 68, 68, 0.15);
+                color: #f87171;
+                border: 1px solid rgba(239, 68, 68, 0.3);
+            }
+            .badge-sakit {
+                background: rgba(96, 165, 250, 0.15);
+                color: #93c5fd;
+                border: 1px solid rgba(96, 165, 250, 0.3);
+            }
+            .progress-bar {
+                background: rgba(201, 168, 76, 0.2);
+                border-radius: 99px;
+                height: 8px;
+            }
+            .progress-fill {
+                background: linear-gradient(90deg, var(--gold), #e8c96e);
+                border-radius: 99px;
+                height: 8px;
+                transition: width 0.5s;
+            }
+            .arrow-icon {
+                opacity: 0.08;
+            }
+            #tab-friday:checked ~ .panel-friday,
+            #tab-saturday:checked ~ .panel-saturday,
+            #tab-sunday:checked ~ .panel-sunday {
+                display: block;
+            }
+            .panel-friday,
+            .panel-saturday,
+            .panel-sunday {
+                display: none;
+            }
+            input[name="day-tab"]#tab-friday:checked
+                ~ *
+                .day-tab
+                label[for="tab-friday"],
+            input[name="day-tab"]#tab-saturday:checked
+                ~ *
+                .day-tab
+                label[for="tab-saturday"],
+            input[name="day-tab"]#tab-sunday:checked
+                ~ *
+                .day-tab
+                label[for="tab-sunday"] {
+                background: var(--gold);
+                color: #0f1117;
+                font-weight: 700;
+            }
+            .menu-section {
+                font-size: 0.65rem;
+                letter-spacing: 0.12em;
+                color: #4b5563;
+                font-weight: 600;
+            }
+            .gold-text {
+                color: var(--gold);
+            }
+            .topbar {
+                background: #13151f;
+                border-bottom: 1px solid var(--border);
+            }
+
+            /* CSS-only tab trick using sibling selectors */
+            #tabs-wrapper:has(#tab-friday:checked) .panel-friday {
+                display: block;
+            }
+            #tabs-wrapper:has(#tab-saturday:checked) .panel-saturday {
+                display: block;
+            }
+            #tabs-wrapper:has(#tab-sunday:checked) .panel-sunday {
+                display: block;
+            }
+
+            #tabs-wrapper:has(#tab-friday:checked) label[for="tab-friday"],
+            #tabs-wrapper:has(#tab-saturday:checked) label[for="tab-saturday"],
+            #tabs-wrapper:has(#tab-sunday:checked) label[for="tab-sunday"] {
+                background: var(--gold);
+                color: #0f1117;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside
+            class="sidebar w-60 min-h-screen flex flex-col fixed left-0 top-0 z-20"
+        >
+            <!-- Logo -->
+            <div
+                class="flex items-center gap-3 px-5 py-5 border-b border-[var(--border)]"
+            >
+                <div
+                    class="w-9 h-9 rounded-lg flex items-center justify-center"
+                    style="background: var(--gold)"
+                >
+                    <img
+                        src="{{url_for('static',filename='images/logo.png')}}"
+                        alt=""
+                    />
+                </div>
+                <div>
+                    <div
+                        class="display-font text-lg leading-none gold-text tracking-wide"
+                    >
+                        SEGAR ARCHERY SCHOOL
+                    </div>
+                    <div class="text-xs text-gray-500 font-medium">
+                        Attendance System
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav -->
+            <nav class="flex-1 px-3 py-5 space-y-1 overflow-y-auto">
+                <div class="menu-section px-3 mb-2">UTAMA</div>
+                <a
+                    href="#"
+                    class="nav-item active flex items-center gap-3 px-3 py-2.5 rounded-r-lg text-sm font-medium text-amber-400"
+                >
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <rect x="3" y="3" width="7" height="7" />
+                        <rect x="14" y="3" width="7" height="7" />
+                        <rect x="3" y="14" width="7" height="7" />
+                        <rect x="14" y="14" width="7" height="7" />
+                    </svg>
+                    Dashboard
+                </a>
+
+                <div class="menu-section px-3 mt-5 mb-2">MASTER DATA</div>
+                <a
+                    href="#"
+                    class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-r-lg text-sm font-medium text-gray-400"
+                >
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                    </svg>
+                    Data Atlet
+                </a>
+                <a
+                    href="#"
+                    class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-r-lg text-sm font-medium text-gray-400"
+                >
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"
+                        />
+                        <polyline points="16 3 12 7 8 3" />
+                    </svg>
+                    Data Pelatih
+                </a>
+                <a
+                    href="#"
+                    class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-r-lg text-sm font-medium text-gray-400"
+                >
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                        />
+                    </svg>
+                    Data Kelompok
+                </a>
+
+                <div class="menu-section px-3 mt-5 mb-2">ABSENSI</div>
+                <a
+                    href="#"
+                    class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-r-lg text-sm font-medium text-gray-400"
+                >
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M9 11l3 3L22 4" />
+                        <path
+                            d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                        />
+                    </svg>
+                    Absensi
+                </a>
+                <a
+                    href="#"
+                    class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-r-lg text-sm font-medium text-gray-400"
+                >
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                    Rekap Absensi
+                </a>
+
+                <div class="menu-section px-3 mt-5 mb-2">AKUN</div>
+                <a
+                    href="#"
+                    class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-r-lg text-sm font-medium text-gray-400"
+                >
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                    </svg>
+                    Profil
+                </a>
+                <a
+                    href="#"
+                    class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-r-lg text-sm font-medium text-gray-400"
+                >
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                        <polyline points="16 17 21 12 16 7" />
+                        <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg>
+                    Logout
+                </a>
+            </nav>
+
+            <div
+                class="px-5 py-4 border-t border-[var(--border)] text-xs text-gray-600"
+            >
+                &copy; 2025
+                <span class="gold-text font-semibold">Klub Panahan</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="ml-60 flex-1 flex flex-col min-h-screen">
+            <!-- Topbar -->
+            <header
+                class="topbar sticky top-0 z-10 flex items-center justify-between px-8 py-4"
+            >
+                <div>
+                    <h1 class="display-font text-3xl tracking-widest gold-text">
+                        ABSENSI PANAHAN
+                    </h1>
+                    <p class="text-xs text-gray-500 mt-0.5">
+                        Latihan Jumat · Sabtu · Minggu
+                    </p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <!-- Notification -->
+                    <div class="relative cursor-pointer">
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#94a3b8"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
+                            />
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        </svg>
+                        <span
+                            class="absolute -top-1 -right-1 w-4 h-4 rounded-full text-[9px] font-bold flex items-center justify-center"
+                            style="background: var(--gold); color: #0f1117"
+                            >3</span
+                        >
+                    </div>
+                    <!-- User -->
+                    <div class="flex items-center gap-2.5 cursor-pointer">
+                        <div
+                            class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm"
+                            style="
+                                background: linear-gradient(
+                                    135deg,
+                                    #c9a84c,
+                                    #e8c96e
+                                );
+                                color: #0f1117;
+                            "
+                        >
+                            AS
+                        </div>
+                        <div>
+                            <div class="text-sm font-semibold leading-none">
+                                {{nama_coach}}
+                            </div>
+                            <div class="text-xs text-gray-500">
+                                {{username_coach}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Body -->
+            <main class="flex-1 px-8 py-7">
+                <!-- Success Alert -->
+                <div
+                    class="flex items-center gap-3 rounded-xl px-5 py-3 mb-7 text-sm font-medium"
+                    style="
+                        background: rgba(34, 197, 94, 0.08);
+                        border: 1px solid rgba(34, 197, 94, 0.25);
+                        color: #4ade80;
+                    "
+                >
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                    >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    Anda berhasil login sebagai
+                    <strong class="ml-1">Coach {{nama_coach}}</strong>
+                    <span
+                        class="ml-auto cursor-pointer opacity-60 hover:opacity-100"
+                        >✕</span
+                    >
+                </div>
+
+                <!-- Stat Cards -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                    <!-- Atlet -->
+                    <div
+                        class="stat-card rounded-2xl p-5 relative overflow-hidden"
+                    >
+                        <svg
+                            class="arrow-icon absolute right-3 top-3 w-16 h-16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#C9A84C"
+                            stroke-width="1"
+                        >
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                        <div class="display-font text-4xl gold-text">24</div>
+                        <div class="text-xs text-gray-400 mt-1 font-medium">
+                            Total Atlet
+                        </div>
+                        <a
+                            href="#"
+                            class="inline-flex items-center gap-1 text-xs gold-text mt-3 font-semibold hover:underline"
+                            >Lihat detail →</a
+                        >
+                    </div>
+                    <!-- Pelatih -->
+                    <div
+                        class="stat-card rounded-2xl p-5 relative overflow-hidden"
+                        style="border-color: #2a3040"
+                    >
+                        <svg
+                            class="arrow-icon absolute right-3 top-3 w-16 h-16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#60a5fa"
+                            stroke-width="1"
+                        >
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                        <div
+                            class="display-font text-4xl"
+                            style="color: #60a5fa"
+                        >
+                            4
+                        </div>
+                        <div class="text-xs text-gray-400 mt-1 font-medium">
+                            Pelatih
+                        </div>
+                        <a
+                            href="#"
+                            class="inline-flex items-center gap-1 text-xs mt-3 font-semibold hover:underline"
+                            style="color: #60a5fa"
+                            >Lihat detail →</a
+                        >
+                    </div>
+                    <!-- Kelompok -->
+                    <div
+                        class="stat-card rounded-2xl p-5 relative overflow-hidden"
+                    >
+                        <svg
+                            class="arrow-icon absolute right-3 top-3 w-16 h-16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#a78bfa"
+                            stroke-width="1"
+                        >
+                            <rect x="3" y="3" width="7" height="7" />
+                            <rect x="14" y="3" width="7" height="7" />
+                            <rect x="3" y="14" width="7" height="7" />
+                            <rect x="14" y="14" width="7" height="7" />
+                        </svg>
+                        <div
+                            class="display-font text-4xl"
+                            style="color: #a78bfa"
+                        >
+                            3
+                        </div>
+                        <div class="text-xs text-gray-400 mt-1 font-medium">
+                            Kelompok
+                        </div>
+                        <a
+                            href="#"
+                            class="inline-flex items-center gap-1 text-xs mt-3 font-semibold hover:underline"
+                            style="color: #a78bfa"
+                            >Lihat detail →</a
+                        >
+                    </div>
+                    <!-- Sesi Latihan -->
+                    <div
+                        class="stat-card rounded-2xl p-5 relative overflow-hidden"
+                    >
+                        <svg
+                            class="arrow-icon absolute right-3 top-3 w-16 h-16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#34d399"
+                            stroke-width="1"
+                        >
+                            <rect x="3" y="4" width="18" height="18" rx="2" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                        <div
+                            class="display-font text-4xl"
+                            style="color: #34d399"
+                        >
+                            12
+                        </div>
+                        <div class="text-xs text-gray-400 mt-1 font-medium">
+                            Sesi Bulan Ini
+                        </div>
+                        <a
+                            href="#"
+                            class="inline-flex items-center gap-1 text-xs mt-3 font-semibold hover:underline"
+                            style="color: #34d399"
+                            >Lihat detail →</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Kehadiran summary -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+                    <div class="stat-card rounded-2xl p-5">
+                        <div
+                            class="text-xs text-gray-500 font-semibold mb-3 uppercase tracking-widest"
+                        >
+                            Kehadiran Minggu Ini
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Hadir</span
+                                    ><span class="text-green-400 font-semibold"
+                                        >78%</span
+                                    >
+                                </div>
+                                <div class="progress-bar">
+                                    <div
+                                        class="progress-fill"
+                                        style="width: 78%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Izin</span
+                                    ><span class="text-yellow-400 font-semibold"
+                                        >12%</span
+                                    >
+                                </div>
+                                <div class="progress-bar">
+                                    <div
+                                        class="progress-fill"
+                                        style="
+                                            width: 12%;
+                                            background: linear-gradient(
+                                                90deg,
+                                                #ca8a04,
+                                                #facc15
+                                            );
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Sakit</span
+                                    ><span
+                                        style="color: #60a5fa"
+                                        class="font-semibold"
+                                        >6%</span
+                                    >
+                                </div>
+                                <div class="progress-bar">
+                                    <div
+                                        class="progress-fill"
+                                        style="
+                                            width: 6%;
+                                            background: linear-gradient(
+                                                90deg,
+                                                #2563eb,
+                                                #60a5fa
+                                            );
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Alpha</span
+                                    ><span class="text-red-400 font-semibold"
+                                        >4%</span
+                                    >
+                                </div>
+                                <div class="progress-bar">
+                                    <div
+                                        class="progress-fill"
+                                        style="
+                                            width: 4%;
+                                            background: linear-gradient(
+                                                90deg,
+                                                #b91c1c,
+                                                #f87171
+                                            );
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Per-day summary -->
+                    <div class="stat-card rounded-2xl p-5 lg:col-span-2">
+                        <div
+                            class="text-xs text-gray-500 font-semibold mb-4 uppercase tracking-widest"
+                        >
+                            Ringkasan Hari Latihan
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div
+                                class="rounded-xl p-4 text-center"
+                                style="
+                                    background: rgba(201, 168, 76, 0.08);
+                                    border: 1px solid rgba(201, 168, 76, 0.2);
+                                "
+                            >
+                                <div class="display-font text-3xl gold-text">
+                                    JUM
+                                </div>
+                                <div class="text-xs text-gray-400 mb-2">
+                                    Jumat
+                                </div>
+                                <div class="text-2xl font-bold text-white">
+                                    20
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                    Hadir / 24
+                                </div>
+                                <div
+                                    class="mt-2 text-xs font-semibold text-green-400"
+                                >
+                                    83%
+                                </div>
+                            </div>
+                            <div
+                                class="rounded-xl p-4 text-center"
+                                style="
+                                    background: rgba(96, 165, 250, 0.08);
+                                    border: 1px solid rgba(96, 165, 250, 0.2);
+                                "
+                            >
+                                <div
+                                    class="display-font text-3xl"
+                                    style="color: #60a5fa"
+                                >
+                                    SAB
+                                </div>
+                                <div class="text-xs text-gray-400 mb-2">
+                                    Sabtu
+                                </div>
+                                <div class="text-2xl font-bold text-white">
+                                    18
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                    Hadir / 24
+                                </div>
+                                <div
+                                    class="mt-2 text-xs font-semibold"
+                                    style="color: #60a5fa"
+                                >
+                                    75%
+                                </div>
+                            </div>
+                            <div
+                                class="rounded-xl p-4 text-center"
+                                style="
+                                    background: rgba(167, 139, 250, 0.08);
+                                    border: 1px solid rgba(167, 139, 250, 0.2);
+                                "
+                            >
+                                <div
+                                    class="display-font text-3xl"
+                                    style="color: #a78bfa"
+                                >
+                                    MIN
+                                </div>
+                                <div class="text-xs text-gray-400 mb-2">
+                                    Minggu
+                                </div>
+                                <div class="text-2xl font-bold text-white">
+                                    22
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                    Hadir / 24
+                                </div>
+                                <div
+                                    class="mt-2 text-xs font-semibold"
+                                    style="color: #a78bfa"
+                                >
+                                    92%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attendance Table with CSS-only tabs -->
+                <div
+                    class="stat-card rounded-2xl overflow-hidden"
+                    id="tabs-wrapper"
+                >
+                    <div
+                        class="px-6 py-4 border-b flex items-center justify-between"
+                        style="border-color: var(--border)"
+                    >
+                        <div
+                            class="display-font text-xl tracking-widest gold-text"
+                        >
+                            DAFTAR ABSENSI
+                        </div>
+                        <div
+                            class="flex items-center gap-1 rounded-xl p-1"
+                            style="background: #0f1117"
+                        >
+                            <!-- Radio inputs -->
+                            <input
+                                type="radio"
+                                name="day-tab"
+                                id="tab-friday"
+                                class="absolute w-0 h-0 opacity-0"
+                                checked
+                            />
+                            <div class="day-tab">
+                                <label for="tab-friday">Jumat</label>
+                            </div>
+
+                            <input
+                                type="radio"
+                                name="day-tab"
+                                id="tab-saturday"
+                                class="absolute w-0 h-0 opacity-0"
+                            />
+                            <div class="day-tab">
+                                <label for="tab-saturday">Sabtu</label>
+                            </div>
+
+                            <input
+                                type="radio"
+                                name="day-tab"
+                                id="tab-sunday"
+                                class="absolute w-0 h-0 opacity-0"
+                            />
+                            <div class="day-tab">
+                                <label for="tab-sunday">Minggu</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Table header -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr
+                                    style="
+                                        background: #0f1117;
+                                        color: #64748b;
+                                        font-size: 0.7rem;
+                                        text-transform: uppercase;
+                                        letter-spacing: 0.08em;
+                                    "
+                                >
+                                    <th
+                                        class="text-left px-6 py-3 font-semibold"
+                                    >
+                                        No
+                                    </th>
+                                    <th
+                                        class="text-left px-6 py-3 font-semibold"
+                                    >
+                                        Nama Atlet
+                                    </th>
+                                    <th
+                                        class="text-left px-6 py-3 font-semibold"
+                                    >
+                                        Kelompok
+                                    </th>
+                                    <th
+                                        class="text-left px-6 py-3 font-semibold"
+                                    >
+                                        Tanggal
+                                    </th>
+                                    <th
+                                        class="text-left px-6 py-3 font-semibold"
+                                    >
+                                        Keterangan
+                                    </th>
+                                    <th
+                                        class="text-left px-6 py-3 font-semibold"
+                                    >
+                                        Catatan
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <!-- Friday Panel -->
+                            <tbody class="panel-friday w-full">
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">1</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Aditya Pratama
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve A
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        21 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">2</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Bunga Lestari
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve B
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        21 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-izin text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Izin</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        Ada acara keluarga
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">3</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Cahyo Widodo
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Compound
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        21 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">4</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Dewi Rahayu
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve A
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        21 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-sakit text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Sakit</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        Demam
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">5</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Eko Saputra
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Compound
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        21 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">6</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Farah Nabila
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve B
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        21 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-alpha text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Alpha</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        Tidak ada keterangan
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <!-- Saturday Panel -->
+                            <tbody class="panel-saturday">
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">1</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Aditya Pratama
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve A
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        22 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">2</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Bunga Lestari
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve B
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        22 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">3</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Cahyo Widodo
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Compound
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        22 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-izin text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Izin</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        Keperluan sekolah
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">4</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Dewi Rahayu
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve A
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        22 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">5</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Eko Saputra
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Compound
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        22 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-alpha text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Alpha</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        Tidak ada keterangan
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">6</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Farah Nabila
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve B
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        22 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-sakit text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Sakit</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        Flu
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <!-- Sunday Panel -->
+                            <tbody class="panel-sunday">
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">1</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Aditya Pratama
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve A
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        23 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">2</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Bunga Lestari
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve B
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        23 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">3</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Cahyo Widodo
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Compound
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        23 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">4</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Dewi Rahayu
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve A
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        23 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">5</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Eko Saputra
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Compound
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        23 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-hadir text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Hadir</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        -
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="table-row border-b"
+                                    style="border-color: var(--border)"
+                                >
+                                    <td class="px-6 py-3 text-gray-500">6</td>
+                                    <td class="px-6 py-3 font-medium">
+                                        Farah Nabila
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        Recurve B
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-400">
+                                        23 Feb 2025
+                                    </td>
+                                    <td class="px-6 py-3">
+                                        <span
+                                            class="badge-izin text-xs px-2 py-0.5 rounded-full font-semibold"
+                                            >Izin</span
+                                        >
+                                    </td>
+                                    <td class="px-6 py-3 text-gray-500 text-xs">
+                                        Wisata sekolah
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div
+                        class="px-6 py-4 flex items-center justify-between border-t"
+                        style="border-color: var(--border)"
+                    >
+                        <span class="text-xs text-gray-500"
+                            >Menampilkan 6 dari 24 atlet</span
+                        >
+                        <div class="flex items-center gap-2">
+                            <button
+                                class="text-xs px-3 py-1.5 rounded-lg text-gray-400 hover:text-white transition"
+                                style="
+                                    background: #0f1117;
+                                    border: 1px solid var(--border);
+                                "
+                            >
+                                ← Prev
+                            </button>
+                            <button
+                                class="text-xs px-3 py-1.5 rounded-lg font-bold"
+                                style="background: var(--gold); color: #0f1117"
+                            >
+                                1
+                            </button>
+                            <button
+                                class="text-xs px-3 py-1.5 rounded-lg text-gray-400 hover:text-white transition"
+                                style="
+                                    background: #0f1117;
+                                    border: 1px solid var(--border);
+                                "
+                            >
+                                2
+                            </button>
+                            <button
+                                class="text-xs px-3 py-1.5 rounded-lg text-gray-400 hover:text-white transition"
+                                style="
+                                    background: #0f1117;
+                                    border: 1px solid var(--border);
+                                "
+                            >
+                                Next →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

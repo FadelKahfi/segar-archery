@@ -60,12 +60,18 @@ def coachLogin():
 
                 valid = bcrypt.checkpw(encodepw, dbpw)
                 if valid:
+                    # Buat sesi
+                    session.permanent = True
+                    session['kedaluwarsa'] = (datetime.now(timezone.utc) + timedelta(days=30)).isoformat()
+                    session["user_id"] = str(account["_id"])
+                    session["username"] = account["username"]
+                    session["name"] = account["name"]
                     return respon_api("success", 200, "Sukses", [], {})
                 else:
-                    return respon_api("failed", 404, "Tetot", [], {}), 404
+                    return respon_api("failed", 401, "Username or Password incorrect", [], {}), 401
 
             else:
-                return respon_api("failed", 404, "Account not found", [], {}), 404
+                return respon_api("failed", 401, "Username or Password incorrect", [], {}), 401
         else:
             return respon_api("error", 400, "Req Method not POST", [], {}), 400
 

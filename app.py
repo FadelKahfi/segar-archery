@@ -1,7 +1,8 @@
 import json
 
 from datetime import datetime, timedelta, timezone
-
+from dotenv import load_dotenv
+import os
 import bcrypt
 import requests
 from flask import (
@@ -15,7 +16,27 @@ from flask import (
     url_for,
 )
 
+# Load .env
+load_dotenv()
+
+# .env Variable
+SESSION_KEY = os.getenv("SECRET_KEY")
+
 app = Flask(__name__)
+app.secret_key = SESSION_KEY
+app.permanent_session_lifetime = timedelta(days=30)
+
+@app.before_request
+def cek_masa_sesi():
+  kedaluwarsa = session.get("kedaluwarsa")
+  
+  if kedaluwarsa:
+    waktu_sekarang = datetime.now(timezone.utc)
+    waktu_kedaluwarsa = datetime.fromisoformat(kedaluwarsa)
+
+    if waktu_sekarang > waktu_kedaluwarsa:
+        session.clear()
+        redirect(url_for("pages_route.coach"))
 
 from routes.api_route import api_route
 from routes.pages_route import pages_route
