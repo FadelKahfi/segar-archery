@@ -1,43 +1,53 @@
 [
     {
         "nama": "Eric Clarent",
-        "ttl": "2001"
+        "ttl": "2001",
+        "category": ""
     },
     {
         "nama": "M. Omar Arkhan",
-        "ttl": "2012"
+        "ttl": "2012",
+        "category": "Compound Putra"
     },
     {
         "nama": "Haniya Izzatunnisa",
-        "ttl": "2012"
+        "ttl": "2012",
+        "category": "SN/Recurve Putri"
     },
     {
         "nama": "Aldizar Brataghani Ardhi",
-        "ttl": "2016"
+        "ttl": "2016",
+        "category": "SN Putra"
     },
     {
         "nama": "Duke Albie Kahfi Adam",
-        "ttl": "2014"
+        "ttl": "2014",
+        "category": "SN/Recurve Putra"
     },
     {
         "nama": "Nasya Syakira Asy'syarifi",
-        "ttl": "2014"
+        "ttl": "2014",
+        "category": "SN Putri"
     },
     {
         "nama": "Rizqi Achmad Saputra",
-        "ttl": "2011"
+        "ttl": "2011",
+        "category": "SN/Recurve Putra"
     },
     {
         "nama": "Jatun Adhi Susilo",
-        "ttl": "1983"
+        "ttl": "1983",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Zuno Athilla Wibawa",
-        "ttl": "2012"
+        "ttl": "2012",
+        "category": "SN Putra"
     },
     {
         "nama": "Julian",
-        "ttl": "1990"
+        "ttl": "1990",
+        "category": "Compound Putra"
     },
     {
         "nama": "Iskandar Zulkarnain",
@@ -45,27 +55,33 @@
     },
     {
         "nama": "Bagas Shidqi Al Abadi",
-        "ttl": "2012"
+        "ttl": "2012",
+        "category": "SN Putra"
     },
     {
         "nama": "Faiq Sadi Baahir",
-        "ttl": "2013"
+        "ttl": "2013",
+        "category": "SN Putra"
     },
     {
         "nama": "Muhammad Tsaqib Khalaf",
-        "ttl": "2010"
+        "ttl": "2010",
+        "category": "Recurve Putra"
     },
     {
         "nama": "Hanifa Irfiani",
-        "ttl": "2009"
+        "ttl": "2009",
+        "category": "Compound Putri"
     },
     {
         "nama": "Isa Abiyasa Djohari",
-        "ttl": "1973"
+        "ttl": "1973",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Wyanette Aletha Fede Siahaan",
-        "ttl": "2012"
+        "ttl": "2012",
+        "category": "SN Putri"
     },
     {
         "nama": "Valldifia Andwita Putri",
@@ -73,11 +89,13 @@
     },
     {
         "nama": "Tommy Harri Ardana",
-        "ttl": "1981"
+        "ttl": "1981",
+        "category": "Barebow dan Compound Putra"
     },
     {
         "nama": "Hafiah Puspitawati",
-        "ttl": "1981"
+        "ttl": "1981",
+        "category": "Barebow Putri"
     },
     {
         "nama": "Muhammad Harizky Ilham",
@@ -85,83 +103,103 @@
     },
     {
         "nama": "Aisyah Nurfitria",
-        "ttl": "2009"
+        "ttl": "2009",
+        "category": "Recurve Putri"
     },
     {
         "nama": "Muhammad Harifkynur Iman",
-        "ttl": "2014"
+        "ttl": "2014",
+        "category": "Compound Putra"
     },
     {
         "nama": "Raisha Fitria Ramadhani",
-        "ttl": "2010"
+        "ttl": "2010",
+        "category": "SN/Recurve Putri"
     },
     {
         "nama": "Muhammad Akhdan Zaim Qisthy",
-        "ttl": "2011"
+        "ttl": "2011",
+        "category": "SN/Recurve Putra"
     },
     {
         "nama": "Muhammad Akhtar Winarta Qisty",
-        "ttl": "2012"
+        "ttl": "2012",
+        "category": "Compound Putra"
     },
     {
         "nama": "M. Ilyas Thaha",
-        "ttl": "1973"
+        "ttl": "1973",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Hikmah",
-        "ttl": "1975"
+        "ttl": "1975",
+        "category": "Barebow Putri"
     },
     {
         "nama": "Alysha Winola Verena",
-        "ttl": "2015"
+        "ttl": "2015",
+        "category": "SN Putri"
     },
     {
         "nama": "Milan Ammara Nareswari",
-        "ttl": "2011"
+        "ttl": "2011",
+        "category": "SN Putri"
     },
     {
         "nama": "Ibrahim Zayyan Radhiansyah",
-        "ttl": "2014"
+        "ttl": "2014",
+        "category": "SN Putra"
     },
     {
         "nama": "Keevana Khairana Khataminnisa",
-        "ttl": "2015"
+        "ttl": "2015",
+        "category": "SN/Recurve Putri"
     },
     {
         "nama": "Siti Humairoh",
-        "ttl": "2014"
+        "ttl": "2014",
+        "category": "SN/Recurve Putri"
     },
     {
         "nama": "Dean Dika",
-        "ttl": "2003"
+        "ttl": "2003",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Faiq Zia El Hakam P.",
-        "ttl": "1996"
+        "ttl": "1996",
+        "category": "SN Putra"
     },
     {
         "nama": "Jatun Adhi Susilo",
-        "ttl": "1983"
+        "ttl": "1983",
+        "category": "Barebow Putra"
     },
     {
         "nama": "M. Ilyas Thaha",
-        "ttl": "1973"
+        "ttl": "1973",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Hikmah",
-        "ttl": "1975"
+        "ttl": "1975",
+        "category": "Barebow Putri"
     },
     {
         "nama": "Rizqi Achmad Saputra",
-        "ttl": "2011"
+        "ttl": "2011",
+        "category": "SN/Recurve Putra"
     },
     {
         "nama": "Marita Ainun",
-        "ttl": "1979"
+        "ttl": "1979",
+        "category": "Barebow Putri"
     },
     {
         "nama": "Junhao",
-        "ttl": " 1976"
+        "ttl": "1976",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Muhammad Zachary Triwidjaya",
@@ -177,75 +215,93 @@
     },
     {
         "nama": "Khairunnisa Karimah Salim",
-        "ttl": "2013"
+        "ttl": "2013",
+        "category": "SN/Recurve Putri"
     },
     {
         "nama": "Muhammad Zudan Argakusuma",
-        "ttl": "2011"
+        "ttl": "2011",
+        "category": "SN/Recurve Putra"
     },
     {
         "nama": "Haniya Izzatunnisa",
-        "ttl": "2012"
+        "ttl": "2012",
+        "category": "SN/Recurve Putri"
     },
     {
         "nama": "Nung",
-        "ttl": ""
+        "ttl": "",
+        "category": "Barebow Putri"
     },
     {
         "nama": "Dhysha Latifah Yasmin",
-        "ttl": "2011"
+        "ttl": "2011",
+        "category": "Barebow Putri"
     },
     {
         "nama": "Hazel Alvino Azfar",
-        "ttl": "2012"
+        "ttl": "2012",
+        "category": "Recurve Putra"
     },
     {
         "nama": "Yazid Firdaus",
-        "ttl": "2015"
+        "ttl": "2015",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Humam Zada Labib Alyusri",
-        "ttl": "2015"
+        "ttl": "2015",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Zhafran Maher Amnan Alyusri",
-        "ttl": "2018"
+        "ttl": "2018",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Shaluna Izzaty Myesha",
-        "ttl": "2015"
+        "ttl": "2015",
+        "category": "Barebow Putri"
     },
     {
         "nama": "Pramudya Yusufa Askara",
-        "ttl": "2020"
+        "ttl": "2020",
+        "category": "SN Putra"
     },
     {
         "nama": "Muhammad Zufar Aqil",
-        "ttl": "2010"
+        "ttl": "2010",
+        "category": "SN Putra"
     },
     {
         "nama": "Adeeva Lady Wijonarko",
-        "ttl": "2015"
+        "ttl": "2015",
+        "category": "SN Putri"
     },
     {
         "nama": "Rafa Adrian Syarief",
-        "ttl": "2015"
+        "ttl": "2015",
+        "category": "Compound Putra"
     },
     {
         "nama": "Althaf Dilla Firmansyah",
-        "ttl": "2013"
+        "ttl": "2013",
+        "category": "SN/Recurve Putri"
     },
     {
         "nama": "Athar Danesh Firmansyah",
-        "ttl": "2014"
+        "ttl": "2014",
+        "category": "Compound Putra"
     },
     {
         "nama": "Rayendra Arkananta Jayamanggala",
-        "ttl": "2010"
+        "ttl": "2010",
+        "category": "SN Putra"
     },
     {
         "nama": "Serafina Rhea Bhatari",
-        "ttl": "2024"
+        "ttl": "2014",
+        "category": "SN Putri"
     },
     {
         "nama": "Annisa Mecca Rahmadina",
@@ -253,34 +309,42 @@
     },
     {
         "nama": "Dean Dika",
-        "ttl": "2003"
+        "ttl": "2003",
+        "category": "Barebow Putra"
     },
     {
         "nama": "Siti Humairoh",
-        "ttl": "2014"
+        "ttl": "2014",
+        "category": "SN/Recurve Putri"
     },
     {
         "nama": "Najmi Nayla Rizqya",
-        "ttl": "2012"
+        "ttl": "2012",
+        "category": "Compound Putri"
     },
     {
         "nama": "Omar Kenzo Alghazi",
-        "ttl": "2014"
+        "ttl": "2014",
+        "category": "SN Putra"
     },
     {
         "nama": "Leandra Faiqah Amira",
-        "ttl": "2013"
+        "ttl": "2013",
+        "category": "SN Putri"
     },
     {
         "nama": "M. Adskhan Syahmi Aryvi Malalutang",
-        "ttl": "2011"
+        "ttl": "2011",
+        "category": "SN/Recurve Putra"
     },
     {
         "nama": "Omar Alfatih Malalutang",
-        "ttl": "2016"
+        "ttl": "2016",
+        "category": "SN Putra"
     },
     {
         "nama": "Muhammad Afsar Hakim",
-        "ttl": "2011"
+        "ttl": "2011",
+        "category": "Barebow Putra"
     }
 ]
