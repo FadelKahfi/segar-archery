@@ -7,13 +7,9 @@ section {
     /* margin-bottom: 30px;
     padding-top: 64px; */
 }
+
 #slide-1 {
-    background: url("/static/images/icon/championship_2026/bg.webp");
-    background-size: cover;
-    background-position: right right;
-}
-#slide-2 {
-    background: url("/static/images/backgroundnew.jpg");
+    background: url("/static/images/bg.webp");
     background-size: cover;
     background-position: bottom;
 }

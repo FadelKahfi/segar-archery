@@ -18,7 +18,7 @@
             },
             {
                 "type": "image",
-                "src": "/static/images/articles/article_1.jpg",
+                "src": "/static/images/articles/article_2.jpg",
                 "alt": "Postur atlet panahan"
             },
             {
@@ -253,6 +253,201 @@
                     },
                     {
                         "value": "1(2), 731-738.",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "slug": "atlet-segar-archery-school-mewakili-kejurnas-panahan-junior-2026",
+        "title": "Atlet dari Segar Archery School Mewakili DKI Jakarta pada Kejurnas Panahan Junior 2026",
+        "published_at": "13/07/2026",
+        "cover_image": "/static/images/articles/kejurnas.webp",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": [
+                    {
+                        "value": "Dengan penuh rasa bangga, Segar Archery School mengantarkan atlet-atlet terbaiknya untuk mewakili DKI Jakarta pada Kejuaraan Nasional Junior Panahan 2026.",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "src": "/static/images/articles/compound-u13.webp",
+                "alt": "Atlet Compound U-13"
+            },
+            {
+                "type": "heading",
+                "level": 2,
+                "text": "🏹 Muhammad Harifkynur Iman (Compound U-13)"
+            },
+            {
+                "type": "heading",
+                "level": 2,
+                "text": "🏹 Athar Danesh Firmansyah (Compound U-13)"
+            },
+            {
+                "type": "image",
+                "src": "/static/images/articles/sn-u18.webp",
+                "alt": "Atlet SN U-18"
+            },
+            {
+                "type": "heading",
+                "level": 2,
+                "text": "🏹 Muhammad Akhdan Zaim Qisthy (Nasional U-18)"
+            },
+            {
+                "type": "paragraph",
+                "text": [
+                    {
+                        "value": "Dengan penuh rasa bangga, Segar Archery School mengantarkan atlet-atlet terbaiknya untuk mewakili DKI Jakarta pada Kejuaraan Nasional Junior Panahan 2026.",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": [
+                    {
+                        "value": "Mari kita doakan semoga seluruh atlet diberikan kesehatan, ketenangan, fokus, dan hasil terbaik di Kejurnas Junior Panahan 2026.",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+
+            {
+                "type": "heading",
+                "level": 2,
+                "text": ""
+            },
+            {
+                "type": "paragraph",
+                "text": [
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            }
+        ],
+        "sources": [
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "Segar Archery School, 2026.",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
                         "bold": false,
                         "italic": false,
                         "underline": false

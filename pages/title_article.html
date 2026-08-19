@@ -485,16 +485,6 @@
                                 ></div>
                             </div>
                         </div>
-
-                        <!-- Source format -->
-                        <div
-                            class="pt-6 border-t border-gray-100 dark:border-gray-700 text-sm text-gray-400 text-center italic"
-                            id="source-format"
-                        >
-                            <div
-                                class="h-5 bg-gray-200 rounded w-96 dark:bg-gray-700 animate-pulse block mx-auto"
-                            ></div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -779,10 +769,6 @@
                         sourceList.innerHTML = loadArticleReference(
                             articleData.sources,
                         );
-
-                        // Source format
-                        sourceFormat.textContent =
-                            "Format Referensi: American Psychological Association (APA) 7th Edition";
                     })
                     .catch((error) => {
                         console.error(error);
