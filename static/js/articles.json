@@ -455,5 +455,136 @@
                 ]
             }
         ]
+    },
+
+    {
+        "slug": "selamat-atas-terpilihnya-julizar-idris-sebagai-ketua-umum-perpani-dki-jakarta",
+        "title": "Segar Archery School Ucapkan Selamat atas Terpilihnya Julizar Idris sebagai Ketua Umum PERPANI DKI Jakarta",
+        "published_at": "29/08/2026",
+        "cover_image": "/static/images/articles/perpanidkijakarta.webp",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": [
+                    {
+                        "value": "JAKARTA — Segenap pengurus, pelatih, dan keluarga besar Segar Archery School mengucapkan selamat dan sukses atas terpilihnya Julizar Idris secara aklamasi sebagai Ketua Umum Persatuan Panahan Indonesia (PERPANI) Provinsi DKI Jakarta. Terpilihnya beliau ditetapkan dalam Musyawarah Provinsi (Musprov) PERPANI DKI Jakarta yang digelar di Hotel 101 Urban Tanah Abang, Jakarta, Sabtu (29/8/2026).",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            }
+        ],
+        "sources": [
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "Segar Archery School, 2026.",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            },
+            {
+                "type": "reference",
+                "text": [
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": true,
+                        "underline": false
+                    },
+                    {
+                        "value": "",
+                        "bold": false,
+                        "italic": false,
+                        "underline": false
+                    }
+                ]
+            }
+        ]
     }
 ]
