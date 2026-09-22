@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Material Symbols Rounded";
+    font-style: normal;
+    src: url("/static/icons/material-symbols/MaterialSymbolsRounded[FILL\,GRAD\,opsz\,wght].woff2")
+        format("woff");
+}
 html,
 body {
     scroll-behavior: smooth;
@@ -7,7 +13,23 @@ section {
     /* margin-bottom: 30px;
     padding-top: 64px; */
 }
+.material-symbols-rounded {
+    font-family: "Material Symbols Rounded";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
 
+.material-icon-fill {
+    font-variation-settings: "FILL" 1;
+}
 #slide-1 {
     background: url("/static/images/bg.webp");
     background-size: cover;

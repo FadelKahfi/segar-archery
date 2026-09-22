@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Segar Archery Open 2027 | Segar Archery School</title>
+        <!-- Favicon Placeholder -->
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏹</text></svg>"
+        />
+        <!-- Google Fonts & Icons -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="/static/icons/fontawesome-free-7.3.1-web/css/all.min.css"
+        />
+
+        <!-- Tailwind CSS -->
+        <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+        <style>
+            body {
+                font-family: "Plus Jakarta Sans", sans-serif;
+            }
+            .hero-bg {
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(15, 23, 42, 0.75) 0%,
+                        rgba(15, 23, 42, 0.95) 100%
+                    ),
+                    url("/static/images/flyer_website_bg.jpg");
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .glass-card {
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+        </style>
+    </head>
+    <body class="bg-slate-50 text-slate-800 antialiased">
+        <!-- Navbar -->
+        <nav
+            class="bg-slate-900/80 backdrop-blur-md fixed w-full top-0 z-50 border-b border-slate-800 transition-all duration-300"
+        >
+            <div
+                class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4 px-6"
+            >
+                <a
+                    href="#"
+                    class="flex items-center space-x-3 rtl:space-x-reverse"
+                >
+                    <!-- Placeholder Logo Segar Archery Open 2027 -->
+                    <img
+                        src="https://via.placeholder.com/150x150/0284c7/ffffff?text=SAO+2027"
+                        class="h-10 w-10 rounded-full object-cover border-2 border-amber-400"
+                        alt="Segar Archery Open 2027 Logo"
+                    />
+                    <span
+                        class="self-center text-xl font-extrabold tracking-tight text-white hidden sm:block"
+                    >
+                        SEGAR ARCHERY OPEN
+                        <span class="text-amber-400">2027</span>
+                    </span>
+                </a>
+                <button
+                    data-collapse-toggle="navbar-dropdown"
+                    type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-slate-300 rounded-lg md:hidden hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600"
+                    aria-controls="navbar-dropdown"
+                    aria-expanded="false"
+                >
+                    <span class="sr-only">Open main menu</span>
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                </button>
+                <div
+                    class="hidden w-full md:block md:w-auto"
+                    id="navbar-dropdown"
+                >
+                    <ul
+                        class="flex flex-col font-semibold p-4 md:p-0 mt-4 border border-slate-700 rounded-xl bg-slate-900 md:bg-transparent md:border-none md:space-x-8 md:flex-row md:mt-0"
+                    >
+                        <li>
+                            <a
+                                href="#"
+                                class="block py-2 px-3 text-amber-400 rounded-md md:p-0 hover:text-amber-300 transition"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#stats"
+                                class="block py-2 px-3 text-slate-200 rounded-md md:p-0 hover:text-amber-400 transition"
+                                >Statistik</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#informasi"
+                                class="block py-2 px-3 text-slate-200 rounded-md md:p-0 hover:text-amber-400 transition"
+                                >Informasi</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#pendaftaran"
+                                class="block py-2 px-3 text-slate-200 rounded-md md:p-0 hover:text-amber-400 transition"
+                                >Pendaftaran</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#lokasi"
+                                class="block py-2 px-3 text-slate-200 rounded-md md:p-0 hover:text-amber-400 transition"
+                                >Lokasi</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+            class="hero-bg min-h-screen flex items-center justify-center pt-24 pb-16 px-4 relative overflow-hidden"
+        >
+            <div class="max-w-4xl mx-auto text-center z-10">
+                <!-- Badge Bulan Januari 2027 -->
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-300 font-semibold text-sm mb-6 animate-pulse"
+                >
+                    <i class="fa-solid fa-calendar-days"></i>
+                    22 - 24 JANUARI 2027 — REGISTRASI SEGERA DIBUKA!
+                </div>
+
+                <!-- Logo Placeholder Besar -->
+                <div class="flex justify-center mb-6">
+                    <img
+                        src="https://via.placeholder.com/200x200/0284c7/ffffff?text=Logo+SAO+2027"
+                        alt="Segar Archery Open 2027"
+                        class="w-36 h-36 md:w-44 md:h-44 object-cover rounded-2xl shadow-2xl border-4 border-amber-400/50 hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+
+                <h1
+                    class="text-4xl md:text-6xl font-black text-white tracking-tight uppercase leading-tight"
+                >
+                    Segar Archery
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500"
+                        >Open 2027</span
+                    >
+                </h1>
+                <p
+                    class="mt-4 text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-normal"
+                >
+                    Kompetisi panahan tingkat nasional paling bergengsi kembali
+                    hadir. Tunjukkan ketepatan dan raih kemenangan terbaikmu!
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a
+                        href="#pendaftaran"
+                        class="px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-extrabold text-lg rounded-xl shadow-lg shadow-amber-500/20 transform hover:-translate-y-1 transition duration-200"
+                    >
+                        <i class="fa-solid fa-bullseye me-2"></i> Daftar
+                        Sekarang
+                    </a>
+                    <a
+                        href="#informasi"
+                        class="px-8 py-4 bg-slate-800/80 hover:bg-slate-700 text-white font-bold text-lg rounded-xl border border-slate-600 backdrop-blur-md transform hover:-translate-y-1 transition duration-200"
+                    >
+                        <i class="fa-solid fa-file-pdf me-2"></i> Technical
+                        Handbook
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Statistik Event Sebelumnya (Highlight 2026) -->
+        <section
+            id="stats"
+            class="py-16 bg-slate-900 border-t border-slate-800 text-white relative"
+        >
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span
+                        class="text-amber-400 font-bold uppercase tracking-widest text-sm"
+                        >Rekam Jejak Prestasi</span
+                    >
+                    <h2 class="text-3xl md:text-4xl font-extrabold mt-1">
+                        Statistik Event Sebelumnya
+                    </h2>
+                    <p class="text-slate-400 mt-2">
+                        Antusiasme luar biasa dari para pemanah di seluruh
+                        Indonesia pada gelaran terdahulu.
+                    </p>
+                </div>
+
+                <!-- Cards Grid -->
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                >
+                    <!-- Card 1 -->
+                    <div
+                        class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 text-center hover:border-amber-400/50 transition"
+                    >
+                        <div
+                            class="w-14 h-14 mx-auto mb-4 bg-amber-400/10 text-amber-400 rounded-xl flex items-center justify-center text-2xl font-bold"
+                        >
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="text-4xl font-black text-amber-400 mb-1">
+                            ±600
+                        </h3>
+                        <p class="text-slate-300 font-medium">
+                            Peserta Terdaftar
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 text-center hover:border-amber-400/50 transition"
+                    >
+                        <div
+                            class="w-14 h-14 mx-auto mb-4 bg-emerald-400/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl font-bold"
+                        >
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-4xl font-black text-emerald-400 mb-1">
+                            ±40
+                        </h3>
+                        <p class="text-slate-300 font-medium">
+                            Klub Panahan Berpartisipasi
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 text-center hover:border-amber-400/50 transition"
+                    >
+                        <div
+                            class="w-14 h-14 mx-auto mb-4 bg-sky-400/10 text-sky-400 rounded-xl flex items-center justify-center text-2xl font-bold"
+                        >
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="text-4xl font-black text-sky-400 mb-1">
+                            20+
+                        </h3>
+                        <p class="text-slate-300 font-medium">
+                            Kategori Pertandingan
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 text-center hover:border-amber-400/50 transition"
+                    >
+                        <div
+                            class="w-14 h-14 mx-auto mb-4 bg-purple-400/10 text-purple-400 rounded-xl flex items-center justify-center text-2xl font-bold"
+                        >
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-4xl font-black text-purple-400 mb-1">
+                            100%
+                        </h3>
+                        <p class="text-slate-300 font-medium">
+                            E-Sertifikat & Medali
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Informasi & Berkas Event -->
+        <section id="informasi" class="py-16 max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2
+                    class="text-3xl font-extrabold uppercase tracking-tight text-slate-900"
+                >
+                    Informasi Turnamen
+                </h2>
+                <div
+                    class="w-16 h-1 bg-amber-500 mx-auto mt-2 rounded-full"
+                ></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Info Item -->
+                <a
+                    href="https://drive.google.com/file/d/1-u8of2Icn3orTCELe7Fbuco0tfKsmvnz/view?usp=sharing"
+                    target="_blank"
+                    class="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-500 transition duration-200 flex flex-col justify-between"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="p-3 bg-amber-100 text-amber-600 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition"
+                        >
+                            <i class="fa-solid fa-book-open text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">
+                                Technical Handbook
+                            </h3>
+                            <p class="text-xs text-slate-500">
+                                Panduan resmi turnamen
+                            </p>
+                        </div>
+                    </div>
+                    <span
+                        class="mt-4 text-xs font-semibold text-amber-600 flex items-center gap-1"
+                    >
+                        Unduh Berkas <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+
+                <!-- Info Item -->
+                <a
+                    href="#"
+                    class="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-500 transition duration-200 flex flex-col justify-between"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="p-3 bg-emerald-100 text-emerald-600 rounded-xl group-hover:bg-emerald-500 group-hover:text-white transition"
+                        >
+                            <i class="fa-solid fa-map-location-dot text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">
+                                Denah Layout
+                            </h3>
+                            <p class="text-xs text-slate-500">
+                                Peta & area perlombaan
+                            </p>
+                        </div>
+                    </div>
+                    <span
+                        class="mt-4 text-xs font-semibold text-emerald-600 flex items-center gap-1"
+                    >
+                        Lihat Layout <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+
+                <!-- Info Item -->
+                <a
+                    href="https://maps.app.goo.gl/khPHjM1fUt1ZhDeX8"
+                    target="_blank"
+                    class="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-500 transition duration-200 flex flex-col justify-between"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="p-3 bg-sky-100 text-sky-600 rounded-xl group-hover:bg-sky-500 group-hover:text-white transition"
+                        >
+                            <i class="fa-solid fa-location-dot text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">
+                                Lokasi Lapangan
+                            </h3>
+                            <p class="text-xs text-slate-500">
+                                Cengkareng, Jakarta Barat
+                            </p>
+                        </div>
+                    </div>
+                    <span
+                        class="mt-4 text-xs font-semibold text-sky-600 flex items-center gap-1"
+                    >
+                        Petunjuk Arah <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+
+                <!-- Info Item -->
+                <a
+                    href="#"
+                    class="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-500 transition duration-200 flex flex-col justify-between"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="p-3 bg-purple-100 text-purple-600 rounded-xl group-hover:bg-purple-500 group-hover:text-white transition"
+                        >
+                            <i class="fa-solid fa-chart-line text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">
+                                Live Score (IANSEO)
+                            </h3>
+                            <p class="text-xs text-slate-500">
+                                Pantau skor langsung
+                            </p>
+                        </div>
+                    </div>
+                    <span
+                        class="mt-4 text-xs font-semibold text-purple-600 flex items-center gap-1"
+                    >
+                        Akses Ianseo <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+
+                <!-- Info Item -->
+                <a
+                    href="#"
+                    class="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-500 transition duration-200 flex flex-col justify-between"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="p-3 bg-rose-100 text-rose-600 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition"
+                        >
+                            <i class="fa-solid fa-bullseye text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">
+                                Nomor Target - Day 1
+                            </h3>
+                            <p class="text-xs text-slate-500">
+                                Jadwal & bantalan hari 1
+                            </p>
+                        </div>
+                    </div>
+                    <span
+                        class="mt-4 text-xs font-semibold text-rose-600 flex items-center gap-1"
+                    >
+                        Cek Target <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+
+                <!-- Info Item -->
+                <a
+                    href="#"
+                    class="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-500 transition duration-200 flex flex-col justify-between"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="p-3 bg-indigo-100 text-indigo-600 rounded-xl group-hover:bg-indigo-500 group-hover:text-white transition"
+                        >
+                            <i class="fa-solid fa-bullseye text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">
+                                Nomor Target - Day 2
+                            </h3>
+                            <p class="text-xs text-slate-500">
+                                Jadwal & bantalan hari 2
+                            </p>
+                        </div>
+                    </div>
+                    <span
+                        class="mt-4 text-xs font-semibold text-indigo-600 flex items-center gap-1"
+                    >
+                        Cek Target <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 3: Pendaftaran -->
+        <section id="pendaftaran" class="py-16 bg-slate-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl font-extrabold uppercase tracking-tight text-slate-900"
+                    >
+                        Kategori Pendaftaran
+                    </h2>
+                    <p class="text-slate-600 mt-2">
+                        Pilih kategori lomba yang sesuai dan amankan slotmu
+                        sekarang!
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card Individu -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-xl transition"
+                    >
+                        <div class="p-6">
+                            <div
+                                class="w-full h-48 bg-slate-100 rounded-xl mb-4 flex items-center justify-center"
+                            >
+                                <img
+                                    class="h-40 object-contain"
+                                    src="/static/images/icon/championship_2026/individu.webp"
+                                    alt="Kategori Individu"
+                                    onerror="
+                                        this.src =
+                                            'https://via.placeholder.com/200x200?text=Individu'
+                                    "
+                                />
+                            </div>
+                            <h3
+                                class="text-2xl font-bold text-slate-900 text-center mb-2"
+                            >
+                                Individu
+                            </h3>
+                            <p class="text-slate-500 text-sm text-center">
+                                Terbuka untuk kategori Standar Bow, Recurve,
+                                Compound, dan Barebow.
+                            </p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a
+                                href="https://wa.me/6281285626568?text=Halo%20Admin,%20saya%20ingin%20mendaftar%20Kategori%20Individu%20Segar%20Archery%20Open%202027"
+                                target="_blank"
+                                class="block w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-center rounded-xl shadow transition"
+                            >
+                                Daftar Individu
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card Beregu/Mix -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-xl transition"
+                    >
+                        <div class="p-6">
+                            <div
+                                class="w-full h-48 bg-slate-100 rounded-xl mb-4 flex items-center justify-center"
+                            >
+                                <img
+                                    class="h-40 object-contain"
+                                    src="/static/images/icon/championship_2026/beregu.webp"
+                                    alt="Kategori Beregu/Mix"
+                                    onerror="
+                                        this.src =
+                                            'https://via.placeholder.com/200x200?text=Beregu'
+                                    "
+                                />
+                            </div>
+                            <h3
+                                class="text-2xl font-bold text-slate-900 text-center mb-2"
+                            >
+                                Beregu / Mix Team
+                            </h3>
+                            <p class="text-slate-500 text-sm text-center">
+                                Tunjukkan kekompakan tim terbaik klubmu untuk
+                                meraih podium tertinggi.
+                            </p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a
+                                href="https://wa.me/6281285626568?text=Halo%20Admin,%20saya%20ingin%20mendaftar%20Kategori%20Beregu%20Segar%20Archery%20Open%202027"
+                                target="_blank"
+                                class="block w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-center rounded-xl shadow transition"
+                            >
+                                Daftar Beregu
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card Official -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-xl transition"
+                    >
+                        <div class="p-6">
+                            <div
+                                class="w-full h-48 bg-slate-100 rounded-xl mb-4 flex items-center justify-center"
+                            >
+                                <img
+                                    class="h-40 object-contain"
+                                    src="/static/images/icon/championship_2026/official.webp"
+                                    alt="Kategori Official"
+                                    onerror="
+                                        this.src =
+                                            'https://via.placeholder.com/200x200?text=Official'
+                                    "
+                                />
+                            </div>
+                            <h3
+                                class="text-2xl font-bold text-slate-900 text-center mb-2"
+                            >
+                                Official / Pelatih
+                            </h3>
+                            <p class="text-slate-500 text-sm text-center">
+                                Pendaftaran untuk pelatih & pendamping resmi
+                                atlet di lapangan.
+                            </p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a
+                                href="https://wa.me/6281285626568?text=Halo%20Admin,%20saya%20ingin%20mendaftar%20Official%20Segar%20Archery%20Open%202027"
+                                target="_blank"
+                                class="block w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-center rounded-xl shadow transition"
+                            >
+                                Daftar Official
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Lokasi -->
+        <section id="lokasi" class="py-16 max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2
+                    class="text-3xl font-extrabold uppercase tracking-tight text-slate-900"
+                >
+                    Lokasi Pertandingan
+                </h2>
+                <p class="text-slate-600 mt-2">
+                    Lapangan Stadion Olahraga Cendrawasih, Jakarta Barat
+                </p>
+            </div>
+
+            <div
+                class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-lg grid grid-cols-1 md:grid-cols-2"
+            >
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.911147600406!2d106.7213567!3d-6.1426365999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f801bb082fad%3A0x4e6efd150419fb5f!2sLapangan%20Stadion%20Olah%20Raga%20Cendrawasih!5e0!3m2!1sid!2sid!4v1770130242441!5m2!1sid!2sid"
+                    width="100%"
+                    height="350"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    class="w-full h-full min-h-[300px]"
+                ></iframe>
+                <div class="p-8 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">
+                        Lapangan Stadion Olahraga Cendrawasih
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        No.22, Jl. Rw. Bengkel No.45, RT.5/RW.7, Cengkareng
+                        Barat, Kecamatan Cengkareng, Kota Jakarta Barat, DKI
+                        Jakarta 11730.
+                    </p>
+                    <a
+                        href="https://maps.app.goo.gl/khPHjM1fUt1ZhDeX8"
+                        target="_blank"
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-xl transition"
+                    >
+                        <i class="fa-solid fa-diamond-turn-right"></i> Buka
+                        Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Sponsorship -->
+        <section
+            class="py-12 bg-gradient-to-r from-amber-500 to-yellow-400 text-slate-950"
+        >
+            <div class="max-w-4xl mx-auto text-center px-6">
+                <h2 class="text-3xl font-black uppercase">Open Sponsorship!</h2>
+                <p class="mt-2 text-slate-900 font-medium">
+                    Jadilah bagian dari suksesnya Segar Archery Open 2027.
+                    Hubungi kami untuk kemitraan sponsor.
+                </p>
+                <a
+                    href="https://wa.me/628129810329"
+                    target="_blank"
+                    class="mt-6 inline-flex items-center gap-2 px-8 py-3 bg-slate-900 hover:bg-slate-800 text-amber-400 font-bold rounded-xl shadow-lg transition"
+                >
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi Tim
+                    Sponsor (+62 812-9810-329)
+                </a>
+            </div>
+        </section>
+
+        <!-- Previous Event Section -->
+        <section
+            id="prev_event"
+            class="py-16 bg-slate-900 border-t border-slate-800 text-white"
+        >
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Header Section -->
+                <div class="text-center mb-10">
+                    <span
+                        class="text-amber-400 font-bold uppercase tracking-widest text-sm"
+                        >Dokumentasi Turnamen</span
+                    >
+                    <h2 class="text-3xl md:text-4xl font-black mt-1 uppercase">
+                        Our Previous Event
+                    </h2>
+                    <div
+                        class="w-16 h-1 bg-amber-500 mx-auto mt-3 rounded-full"
+                    ></div>
+                </div>
+
+                <!-- Logo Previous Event 2026 -->
+                <div class="flex flex-col items-center justify-center mb-12">
+                    <img
+                        class="h-28 md:h-36 object-contain drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] transform hover:scale-105 transition duration-300 mb-4"
+                        src="/static/images/icon/championship_2026/logo.webp"
+                        alt="Segar Archery Championship 2026 Logo"
+                    />
+                    <a
+                        href="https://www.segararcheryopen.com"
+                        target="_blank"
+                        class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-slate-800 border border-slate-700 text-amber-400 hover:bg-amber-400 hover:text-slate-950 font-semibold text-sm transition duration-200"
+                    >
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Lihat Arsip Segar Archery Championship 2026
+                    </a>
+                </div>
+
+                <!-- Photo Documentation Grid (6 Photos) -->
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+                >
+                    <!-- Photo 1 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 shadow-md"
+                    >
+                        <img
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-500 ease-in-out"
+                            src="/static/images/icon/championship_2026/photo1.webp"
+                            alt="Aksi Pemanah Muda"
+                        />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-4 flex items-end"
+                        >
+                            <p class="text-sm font-semibold text-white">
+                                Konsentrasi & Garis Tembak Atlet
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 shadow-md"
+                    >
+                        <img
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-500 ease-in-out"
+                            src="/static/images/icon/championship_2026/photo2.webp"
+                            alt="Pemeriksaan Penilaian Judge"
+                        />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-4 flex items-end"
+                        >
+                            <p class="text-sm font-semibold text-white">
+                                Penilaian & Pengawasan Wasit
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 shadow-md"
+                    >
+                        <img
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-500 ease-in-out"
+                            src="/static/images/icon/championship_2026/photo3.webp"
+                            alt="Sambutan Panitia"
+                        />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-4 flex items-end"
+                        >
+                            <p class="text-sm font-semibold text-white">
+                                Sambutan & Pembukaan Event
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 shadow-md"
+                    >
+                        <img
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-500 ease-in-out"
+                            src="/static/images/icon/championship_2026/photo4.webp"
+                            alt="Pengarahan Lapangan"
+                        />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-4 flex items-end"
+                        >
+                            <p class="text-sm font-semibold text-white">
+                                Suasana Lapangan Stadion Cendrawasih
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 shadow-md"
+                    >
+                        <img
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-500 ease-in-out"
+                            src="/static/images/icon/championship_2026/photo5.webp"
+                            alt="Kategori Compound Bow"
+                        />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-4 flex items-end"
+                        >
+                            <p class="text-sm font-semibold text-white">
+                                Persaingan Sengit Divisi Bow
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 shadow-md"
+                    >
+                        <img
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-500 ease-in-out"
+                            src="/static/images/icon/championship_2026/photo6.webp"
+                            alt="Kebersamaan Pemanah"
+                        />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-4 flex items-end"
+                        >
+                            <p class="text-sm font-semibold text-white">
+                                Keseruan & Sportivitas Atlet
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Sponsors Section -->
+                <div
+                    class="bg-slate-800/60 rounded-3xl p-8 border border-slate-700 text-center"
+                >
+                    <h3
+                        class="text-lg font-bold uppercase tracking-wider text-slate-300 mb-6"
+                    >
+                        Official Sponsors & Partners (2026)
+                    </h3>
+                    <div class="flex justify-center items-center">
+                        <img
+                            class="w-full max-w-4xl rounded-xl object-contain shadow-lg"
+                            src="/static/images/icon/championship_2026/prev_sponsor_championship_2026.png"
+                            alt="Sponsor Segar Archery Championship 2026"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer
+            class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800"
+        >
+            <div
+                class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <img
+                            src="/static/images/logo_transparant.png"
+                            class="h-10 rounded-full"
+                            alt="Logo Segar Archery"
+                        />
+                        <span class="text-white font-extrabold text-xl"
+                            >Segar Archery School</span
+                        >
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        Pembinaan karakter, fokus, dan disiplin melalui olahraga
+                        panahan. Give the best, WIN!!!
+                    </p>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-3">
+                        Navigasi Usuka
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="#" class="hover:text-amber-400 transition"
+                                >Beranda</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#stats"
+                                class="hover:text-amber-400 transition"
+                                >Statistik Event</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#informasi"
+                                class="hover:text-amber-400 transition"
+                                >Informasi Lomba</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#pendaftaran"
+                                class="hover:text-amber-400 transition"
+                                >Kategori Pendaftaran</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Socials -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-3">
+                        Ikuti Kami
+                    </h3>
+                    <div class="flex space-x-3 mb-4">
+                        <a
+                            href="https://www.tiktok.com/@segararchery"
+                            target="_blank"
+                            class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-amber-400 hover:text-slate-950 transition"
+                        >
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/segar.archery/"
+                            target="_blank"
+                            class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-amber-400 hover:text-slate-950 transition"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a
+                            href="https://wa.me/6281285626568"
+                            target="_blank"
+                            class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-amber-400 hover:text-slate-950 transition"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <p class="text-xs text-slate-500">
+                        © 2027 Segar Archery School. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Flowbite JS -->
+        <script src="/static/js/bundle.js"></script>
+    </body>
+</html>

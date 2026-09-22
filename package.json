@@ -1,0 +1,27 @@
+{
+    "name": "segar-archery",
+    "version": "1.0.0",
+    "description": "Website company profile for Segar Archery School",
+    "main": "tailwind.config.js",
+    "scripts": {
+        "build:js": "esbuild static/js/import.js --bundle --minify --sourcemap --outfile=static/js/bundle.js",
+        "build": "npm run build:js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/FadelKahfi/segar-archery.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/FadelKahfi/segar-archery/issues"
+    },
+    "homepage": "https://github.com/FadelKahfi/segar-archery#readme",
+    "dependencies": {
+        "esbuild": "^0.28.2",
+        "flowbite": "^4.0.2",
+        "swiper": "^14.2.0",
+        "tailwindcss": "^4.3.3"
+    }
+}
