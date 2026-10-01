@@ -35,6 +35,11 @@ section {
     background-size: cover;
     background-position: bottom;
 }
+#slide-2 {
+    background: url("/static/images/icon/open_2027/bg_open2027.webp");
+    background-size: cover;
+    background-position: bottom;
+}
 /* Floating Sidebar */
 .floating-sidebar {
     position: fixed;
